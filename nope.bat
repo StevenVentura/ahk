@@ -1,0 +1,1 @@
+taskkill /IM autohotkey.exe /F
