@@ -8,7 +8,20 @@
 #x::Cut()
 #c::Copy()
 #v::Paste()
+#z::Swap()
+
 global board2
+
+Swap() {
+/*
+idiot code btw
+*/
+a:= ClipboardAll
+b:= board2
+board2:= a
+Clipboard:= b
+SoundBeep, 750, 100
+}
 
 Cut() {
 normalboard:= ClipboardAll
