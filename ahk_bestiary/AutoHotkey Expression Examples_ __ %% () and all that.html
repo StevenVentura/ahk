@@ -1,0 +1,2616 @@
+
+<!-- saved from url=(0078)http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- http://www.autohotkey.com/forum/viewtopic.php?t=41511 -->
+<style type="text/css">
+img {max-width:100%; height:auto;}
+.indent1 { position: relative; left: 1em; }
+.header    { font-family: Arial; font-size: 24px; line-height: normal; color: #000000;}
+.subheader { font-family: Arial; font-size: 18px; line-height: normal; color: #4F4F4F;}
+.lh  { font-family: Arial; font-size: 18px; line-height: normal; color: #4F4F4F;}
+.lh2 { font-family: Arial; font-size: 18px; line-height: normal; color: #4F4F4F;}
+.lh3 { font-family: Arial; font-size: 16px; line-height: normal; color: #4F4F4F;}
+.hd3 { font-family: Arial; font-size: smaller; font-weight: bold; }
+.hd4 { font-family: Arial; font-size: smaller; }
+.hd5 { font-family: Arial; font-weight: bold; }
+.hd6 { font-family: Courier New; }
+.arial  { font-family: Arial; font-size: smaller; font-weight: bold;}
+.com { color: #008000; }
+.comsm { font-size: smaller; color: #008000; }
+.precom { font-family: Andale Mono, Courier New, Courier, sans-serif; font-size: 12px; line-height: 16px; color: #008000; }
+.precom3 { font-family: Andale Mono, Courier New, Courier, sans-serif; font-size: 12px; line-height: 16px; color: #008000; position: relative; left: 3em;}
+.url { color: blue; text-decoration: underline; }
+.uk  { color: #FF0000; }
+.b1  { color: #008000; font-weight: normal; background-color: #E6E6E6; }
+.b2  { color: #0000A0; font-weight: normal; background-color: #E6E6E6; }
+.b3  { color: #008000; font-weight: normal; background-color: #E6E6E6; }
+.b4  { color: #008000; font-weight: normal; background-color: #D0D0D0; }
+.cn  { font-family: "Courier New"; }
+.cnb { font-family: "Courier New"; font-weight: bold; }
+.ctb { font-family: "Courier New"; font-size: smaller; font-weight: bold; }
+.ct  { font-family: "Courier New"; font-size: smaller;}
+.mono { font-family: Andale Mono, Courier New, Courier, sans-serif; font-size: medium; color: #000000; }
+.monodb { font-family: Andale Mono, Courier New, Courier, sans-serif; font-size: medium; color: darkblue; }
+.monosm { font-family: Andale Mono, Courier New, Courier, sans-serif; font-size: small; color: #000000; }
+.monosmdb { font-family: Andale Mono, Courier New, Courier, sans-serif; font-size: small; color: darkblue; }
+.bk  { font-family: "Courier New"; color: #000000; }
+.tn   {color:green; font-size:smaller;}
+.tnb  {color:blank; font-size:smaller;}
+.tnb3 {color:blank; font-size:smaller; position: relative; left: 3em; }
+.tn3  {color:green; font-size:smaller; position: relative; left: 3em; }
+.black {color:black;}
+.red {color:red;}
+.darkred {color:darkred;}
+.version {font-size:xx-small; color: green;}
+.xxsmall {font-size:xx-small;}
+.ns { font-family: sans-serif; font-size: small; color: blue; }
+OL.none { list-style-type: none }
+
+pre {
+  font-family: Andale Mono, Courier New, Courier, sans-serif; font-size: 12px; line-height: 16px; color: #0000A0;
+  background-color: #FAFAFA; border: #D1D7DC; border-style: solid;
+  margin-top: 0.7em;
+  margin-right: 0;
+  margin-left: 1.2em;
+  margin-bottom: 1.5em;
+  padding: 0.3em 0.1em 0.7em 0.9em;
+  border: 0px solid #990000;
+}
+
+ul.cmenu {
+  list-style-type: none;
+  margin-left:5px;
+  padding-left:0px;
+}
+.cmenu li{
+  list-style-type: none;
+  margin-left:50px;
+  margin-top:5px;
+  padding-left:20px;
+}
+.collapse {
+  background-image: url(minus.gif);
+  background-repeat: no-repeat;
+  background-position: 0 0.15em;
+}
+.expand {
+  background-image: url(plus.gif);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.osterman {
+  background: #FFFFFF;
+  font: 76%/1.2em Verdana, Arial, Helvetica, sans-serif;
+}
+body {
+  background: #E5E5E5;
+}
+.code {
+  font-family:Monospace,Courier New,Courier;
+  font-size:smaller;
+  white-space: nowrap;
+  color:#006;
+}
+TD { vertical-align: top }
+div.codesamp
+{
+  vertical-align: middle;
+  white-space: nowrap;
+  color:#006;
+  font-family: Andale Mono, Courier New, Monospace, Courier, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #0000A0;
+  background-color: #FAFAFA;
+  margin-top: 1.5em;
+  margin-right: 0;
+  margin-left: 1.2em;
+  margin-bottom: 1.5em;
+  padding: 0.7em 0.1em 0.7em 1.2em;
+}
+div.codesamp2
+{
+  vertical-align: middle;
+  white-space: nowrap;
+  color:#006;
+  font-family: Andale Mono, Courier New, Monospace, Courier, sans-serif;
+  font-size:x-small;
+  color: #0000A0;
+  background-color: #FAFAFA;
+  margin: 0;
+  padding: 0.3em 0.3em 0.3em 1.2em;
+}
+
+.tarrow
+{
+  font-family:Monospace,Courier New,Courier;
+  vertical-align: top;
+  font-size:3mm;
+  line-height: 110%;
+  white-space: nowrap;
+  color:#D0D0D0;
+}
+div.footnotes a
+{
+  text-decoration: none;
+}
+.footnotes
+{
+  font-family:Arial,Helvetica,Verdana;
+  font-size:x-small;
+  text-decoration:none;
+}
+.footcode
+{
+  font-family: Andale Mono, Courier New, Monospace, Courier, sans-serif;
+  font-size:x-small;
+  color: #0000A0;
+  text-decoration:none;
+}
+a.footnote
+{
+  font-size:smaller;
+  text-decoration: none;
+}
+</style>
+<title>AutoHotkey Expression Examples: "" %% () and all that</title>
+<script type="text/javascript" id="inject">
+class Modifier {
+    constructor() {
+        this.result = [];
+        this.mark = new WeakSet();
+        this.initListener();
+    }
+    initListener() {
+        window.addEventListener('message', function (event) {
+            let msg = event.data;
+            try {
+                if (msg.cmd && msg.cmd.startsWith('C2T_')) {
+                    this[msg.cmd](...msg.param);
+                }
+            }
+            catch (e) {
+                this.sendMessage('recvError', msg.cmd);
+            }
+        }.bind(this), false);
+    }
+    sendMessage(cmd, ...param) {
+        let msg = {};
+        msg.cmd = cmd;
+        msg.param = param;
+        window.postMessage(msg, "*");
+    }
+    C2T_Find(val) {
+        setTimeout(() => {
+            this.val = val;
+            this.result = [];
+            this.pathStack = [];
+            this.initMark();
+            this.findPath(window, 'window');
+            let result = this.result.slice(0, 128);
+            this.sendMessage('T2C_Result', result);
+        });
+    }
+    C2T_FindAgain(val) {
+        setTimeout(() => {
+            this.val = val;
+            this.findPathAgain();
+            let result = this.result.slice(0, 128);
+            this.sendMessage('T2C_Result', result);
+        });
+    }
+    C2T_Modify(val, path) {
+        try {
+            eval(path + '=' + val);
+        }
+        catch (e) {
+        }
+    }
+    initMark() {
+        let omit = ["$", "speechSynthesis", "caches", "stop", "open", "alert", "confirm", "prompt", "print", "requestAnimationFrame", "cancelAnimationFrame", "requestIdleCallback", "cancelIdleCallback", "captureEvents", "releaseEvents", "getComputedStyle", "matchMedia", "moveTo", "moveBy", "resizeTo", "resizeBy", "getSelection", "find", "getMatchedCSSRules", "webkitRequestAnimationFrame", "webkitCancelAnimationFrame", "webkitCancelRequestAnimationFrame", "btoa", "atob", "setTimeout", "localStorage", "clearTimeout", "sessionStorage", "setInterval", "clearInterval", "createImageBitmap", "scroll", "scrollTo", "indexedDB", "scrollBy", "webkitIndexedDB", "ondeviceorientationabsolute", "fetch", "ondeviceorientation", "ondevicemotion", "crypto", "webkitRequestFileSystem", "postMessage", "blur", "webkitResolveLocalFileSystemURL", "focus", "openDatabase", "close", "onpointerup", "onpointerover", "onpointerout", "onpointermove", "onpointerleave", "onpointerenter", "onpointerdown", "onpointercancel", "chrome", "console", "customElements", "onauxclick", "performance", "onunload", "onunhandledrejection", "onstorage", "onrejectionhandled", "onpopstate", "onpageshow", "onpagehide", "ononline", "onoffline", "onmessage", "onlanguagechange", "onhashchange", "onbeforeunload", "onwaiting", "onvolumechange", "ontoggle", "ontimeupdate", "onsuspend", "onsubmit", "onstalled", "onshow", "onselect", "onseeking", "onseeked", "onscroll", "onresize", "onreset", "onratechange", "onprogress", "onplaying", "onplay", "onpause", "onmousewheel", "onmouseup", "onmouseover", "onmouseout", "onmousemove", "onmouseleave", "onmouseenter", "onmousedown", "onloadstart", "onloadedmetadata", "onloadeddata", "onload", "onkeyup", "onkeypress", "onkeydown", "oninvalid", "oninput", "onfocus", "onerror", "onended", "onemptied", "ondurationchange", "ondrop", "ondragstart", "ondragover", "ondragleave", "ondragenter", "ondragend", "ondrag", "ondblclick", "oncuechange", "oncontextmenu", "onclose", "onclick", "onchange", "oncanplaythrough", "oncanplay", "oncancel", "onblur", "onabort", "onwheel", "onwebkittransitionend", "onwebkitanimationstart", "onwebkitanimationiteration", "onwebkitanimationend", "ontransitionend", "onsearch", "onanimationstart", "onanimationiteration", "onanimationend", "styleMedia", "clientInformation", "screen", "external", "applicationCache", "navigator", "parent", "opener", "top", "toolbar", "statusbar", "scrollbars", "personalbar", "menubar", "locationbar", "history", "location", "self", "window"];
+        this.mark = new WeakSet();
+        for (let i of omit) {
+            if (window[i] && window[i] !== window)
+                this.mark.add(window[i]);
+        }
+    }
+    getPath() {
+        let path = 'window';
+        for (let i = 1; i < this.pathStack.length; i++) {
+            let key = this.pathStack[i];
+            if (typeof key == 'number' || !isNaN(Number(key))) {
+                path += '[' + key + ']';
+            }
+            else {
+                path += '.' + key;
+            }
+        }
+        this.pathStack.pop();
+        return path;
+    }
+    findPathAgain() {
+        let res = [];
+        for (let i of this.result) {
+            try {
+                if (eval(i) === this.val) {
+                    res.push(i);
+                }
+            }
+            catch (e) {
+            }
+        }
+        this.result = res;
+    }
+    findPath(parent, key) {
+        if (parent != null && parent != undefined && !this.mark.has(parent)) {
+            this.mark.add(parent);
+            this.pathStack.push(key);
+            for (let childKey of Object.keys(parent)) {
+                try {
+                    if (childKey == 'webkitStorageInfo') {
+                        continue;
+                    }
+                    let child = parent[childKey];
+                    switch (typeof child) {
+                        case 'object':
+                        case 'function':
+                            this.findPath(child, childKey);
+                            break;
+                        case 'number':
+                        case 'boolean':
+                            if (this.val === child) {
+                                this.pathStack.push(childKey);
+                                this.result.push(this.getPath());
+                            }
+                            break;
+                    }
+                }
+                catch (e) {
+                }
+            }
+            this.pathStack.pop();
+        }
+    }
+}
+Modifier.H = new Modifier();
+
+</script></head>
+
+<body><a name="top"></a>
+<span style="font-family: Arial; font-size: 24px; line-height: normal">AutoHotkey Expression Examples: "" %% () and all that.</span>
+<br>because I can never get them right, so I made this. These are all working examples.&nbsp;&nbsp;&nbsp;<span class="version">Version 1.21c&nbsp;&nbsp;08/24/2009</span>
+<br>
+<br>
+CONTENTS:
+<br>
+
+<br>
+<table border="0" class="indent1" cellspacing="4">
+<tbody><tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#A">A:</a></td><td>RETRIEVING COMMAND LINE PARAMETERS</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#B">B:</a></td><td>COMMON THINGS AT THE BEGINNING AND END OF AUTOHOTKEY SCRIPTS</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#C">C:</a></td><td>WHEN TO USE <span class="cn">%%</span> AROUND VARIABLES</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#D">D:</a></td><td>ERASE A VARIABLE</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#E">E:</a></td><td>SET A VARIABLE&nbsp;&nbsp;&nbsp;<span class="cn">:=</span>&nbsp;&nbsp;&nbsp;[store numbers, quoted strings]</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#F">F:</a></td><td>SET A VARIABLE&nbsp;&nbsp;&nbsp;<span class="cn">=&nbsp;</span>&nbsp;&nbsp;&nbsp;[assign unquoted literal strings]</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#G">G:</a></td><td>COPY A VARIABLE</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#H">H:</a></td><td>IF STATEMENTS with <span class="cn">()</span></td></tr>
+<tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#H2">H2:</a> Comparing Numeric Values vs. Comparing Strings</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#I">I:</a></td><td>IF STATEMENTS without <span class="cn">()</span>  [Translate the 1st, take the 2nd literally]</td></tr>
+<tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#I2">I2:</a> Comparing Numeric Values vs. Comparing Strings</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#J">J:</a></td><td>CHECK FOR A BLANK VARIABLE</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#K">K:</a></td><td>STRING MANIPULATION
+<br>
+<table border="0">
+<tbody><tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#K1">K1:</a></td><td>Trim whitespace at the start of the string</td></tr>
+<tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#K2">K2:</a></td><td>Trim whitespace at the end of the string</td></tr>
+<tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#K3">K3:</a></td><td>Trim whitespace at the start and the end of the string</td></tr>
+<tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#K4">K4:</a></td><td>Concatenate two strings together<br>
+</td></tr><tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#K5">K5:</a></td><td>Two ways of using MsgBox</td></tr>
+</tbody></table></td></tr>
+
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#L">L:</a></td><td colspan="3">NUMBERS
+
+<br><table border="0">
+<tbody><tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#L1">L1:</a></td><td>Adding numbers together</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#L2">L2:</a></td><td>Adding two strings together:<br>
+when both can be interpreted as integers, gives the resulting integer (as a string)<br>
+when both can be interpreted as float, gives the resulting float (as a string)<br>
+when one or both can NOT be interpreted as a number, result is an empty string</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#L3">L3:</a></td><td>Remove leading and trailing blanks and leading zeros from a number</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#L4">L4:</a></td><td>Various ways to pad a number with leading zeros or spaces</td></tr>
+</tbody></table></td></tr>
+
+
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#M">M:</a></td><td colspan="3">working with FILE NAMES</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#N">N:</a></td><td colspan="3">REGULAR EXPRESSIONS
+
+<br><table border="0">
+    <tbody><tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#N1">N1:</a></td><td>Links to: Cheat Sheets, documentation, programs, libraries</td></tr>
+    <tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#N2">N2:</a></td><td>Examples</td></tr>
+    <tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#N3">N3:</a></td><td>RegExReplace
+
+    <br><table border="0">
+    <tbody><tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#N3.1">N3.1:</a> Examples</td></tr>
+    <tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#N3.2">N3.2:</a> Extract Month, Day, Year, from 1/22/2009</td></tr>
+    <tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#N3.3">N3.3:</a> An example of how we can step by step build up our Regular Expression</td></tr>
+    <tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#N3.4">N3.4:</a> Find the $ dollar sign. Extract price and add a dollar sign.</td></tr>
+    </tbody></table></td></tr>
+
+</tbody></table></td></tr>
+
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#O">O:</a></td><td colspan="3">MISC AUTOHOTKEY NOTES. CAVEATS &amp; DEBUGGING TIPS
+
+<br><table border="0">
+    <tbody><tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#O1">O1:</a></td><td>Notes / Caveats</td></tr>
+    <tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#O2">O2:</a></td><td>Sending debug data to a log file</td></tr>
+    <tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#O3">O3:</a></td><td>Capturing a screen image during run</td></tr>
+    </tbody></table></td></tr>
+
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#P">P:</a></td><td>MISC AUTOHOTKEY SCRIPTS
+<br><table border="0">
+<tbody><tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#P1">P1:</a></td><td>Misc AutoHotkey Scripts</td></tr>
+<tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#P2">P2:</a></td><td>Index of notable scripts found in the AutoHotkey Forum</td></tr>
+<tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#P3">P3:</a></td><td>AHK Functions - ƒ()</td></tr>
+<tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#P4">P4:</a></td><td>Library for Text File Manipulation</td></tr>
+<tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#P5">P5:</a></td><td>Tray Icons<br>
+</td></tr><tr><td></td><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#P6">P6:</a></td><td>Force Exit another AutoHotkey script</td></tr>
+</tbody></table></td></tr>
+
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#Q">Q:</a></td><td colspan="3">NAVIGATING WEB SITES
+
+<br><table border="0">
+      <tbody><tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#Q1">Q1:</a></td><td>Determining when a webpage has finished loading</td></tr>
+      <tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#Q2">Q2:</a></td><td>Positioning on a control</td></tr>
+      <tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#Q3">Q3:</a></td><td>Search for a certain colored pixel</td></tr>
+</tbody></table></td></tr>
+
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#R">R:</a></td><td>NEWBIE RECOMMENDED LEARNING SEQUENCE</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#S">S:</a></td><td>Press ESC to cancel this scipt</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#T">T:</a></td><td>THE AUTOHOTKEY RUN COMMAND</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#U">U:</a></td><td>PASSING PARAMETERS TO AUTOHOTKEY SCRIPTS</td></tr>
+<tr><td><a href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#V">V:</a></td><td>PASSING PARAMETERS TO ANY PROGRAM</td></tr>
+
+</tbody></table>
+<br>
+<br>
+<br>/******************************************************************************
+<table border="0" width="1">
+        <tbody><tr>
+                <td class="cn"><nobr>NOTE:&nbsp;</nobr></td>
+                <td>ALL VARIABLES ARE STORED AS CHARACTER STRINGS !!!
+                 <br>Strings containing numbers are converted to numbers when needed, and the result is converted back to a string.
+                </td>
+        </tr>
+  <tr><td colspan="2" style="visibility:hidden;"><nobr>/******************************************************************************</nobr></td>
+        </tr><tr><td><nobr>NOTE:&nbsp;</nobr></td>
+    <td>Closing <span class="cn">*/</span> must be first thing on line. Otherwise you'll be asking yourself,
+"Why does my script stop running at this point, as if the whole rest of
+the script was commented out?"
+    </td>
+        </tr>
+</tbody></table>
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+
+<a name="A"><span class="lh">A:</span><span class="header">&nbsp;&nbsp;PASSING COMMAND LINE PARAMETERS TO AN AUTOHOTKEY SCRIPT</span></a>
+<br>
+<ul>
+  <li>Arguments are delimited by white space, which is either a space or a tab.
+  </li><li>The caret character (^) is not recognized as an escape character or delimiter. The character is handled completely by the command-line parser in the operating system before being passed to the argv array in the program.
+  </li><li>A string surrounded by double quotation marks ("<i>string</i>") is interpreted as a single argument, regardless of white space contained within. A quoted string can be embedded in an argument.
+  </li><li>A double quotation mark preceded by a backslash (\") is interpreted as a literal double quotation mark character (").
+  </li><li>Backslashes are interpreted literally, unless they immediately precede a double quotation mark.
+  </li><li>If an even number of backslashes is followed by a double quotation mark, one backslash is placed in the argv array for every pair of backslashes, and the double quotation mark is interpreted as a string delimiter.
+  </li><li>If an odd number of backslashes is followed by a double quotation mark, one backslash is placed in the argv array for every pair of backslashes, and the double quotation mark is "escaped" by the remaining backslash, causing a literal double quotation mark (") to be placed in argv.
+</li></ul>
+
+  <ul class="cmenu">
+    <li><span class="url">Tech note on passing command line parameters to any program</span>
+      <ul style="display:none" class="osterman">
+<p>
+On Windows, a new program is launched by calling the
+<a href="http://msdn2.microsoft.com/en-us/library/ms682425.aspx">CreateProcess</a> API, which
+takes the command line as a string (the <i>lpComandLine</i> parameter to CreateProcess). It's
+considered the responsibility of the newly started application to call the
+<a href="http://msdn2.microsoft.com/en-us/library/ms683156.aspx">GetCommandLine</a> API to
+retrieve that command line and parse it (possibly using the
+<a href="http://msdn2.microsoft.com/en-us/library/ms647232.aspx">CommandLineToArgvW</a> helper
+function).
+
+</p><p>For programs written in C++, the C++ compiler adds prologue code to the executable which runs
+before the <b>WinMain</b> function. This prologue code calls the
+<span class="api">GetCommandLine</span> API to retrieve the command line, then parses the command
+line extracting the parameters into <b>argv[]</b>.
+
+</p><p>
+If you disassemble AutoHotkey.exe you'll find the prologue code which parses the command line
+parameters into argv[]. It's not in the AutoHotkey source code, it was added by the C++ compiler.
+Therefore, the C++ compiler used to compile AutoHotkey determines how command line parameters are
+parsed.
+
+</p><p>Since AutoHotkey is written in C++, the C++ compiler used to compile AutoHotkey
+determines how command line parameters are parsed.
+
+<br>
+<br>
+<br>
+<br>
+On Windows, parsing the command line parameters is performed by the application, not by the
+operating system. All the system offers is the
+<a href="http://msdn2.microsoft.com/en-us/library/ms683156.aspx">GetCommandLine</a> API,
+which hands the application the entire command line as one long string.
+
+</p><p>This is why you'll get different results if you pass a command line with parameters to
+a C/C++ program (ShowParams.exe), a VBScript (ShowParams.vbs), or a batch file (ShowParams.bat)
+<br><br>
+C/C++
+</p><pre>&gt;ShowParams.exe  "c:\test a\"  "c:\test b\"
+param 1 = c:\test a" c:\test
+param 2 = b"
+( \" is interpreted as meaning "a literal double quote.")
+</pre>
+VBScript
+<pre>&gt;ShowParams.vbs  "c:\test a\"  "c:\test b\"
+param 1 = c:\test a\
+param 2 = c:\test b\
+</pre>
+Batch script
+<pre>&gt;ShowParams.bat  "c:\test a\"  "c:\test b\"
+param 1 = "c:\test a\"
+param 2 = "c:\test b\"
+(the double quotes are included as part of the parameter)
+</pre>
+Parameters passed to a AutoHotkey script are parsed by AutoHotkey.exe, which is the program running the script.
+Parameters passed to a VBScript are parsed by WScript.exe (or possibly CScript.exe), which is the program running the VBScript.
+Parameters passed to a batch file are parsed by cmd.exe, which is the program that runs the batch script.
+<p>
+Here are some test programs you can try:
+</p><pre>ShowParams.c
+#include "stdafx.h"
+int main(int argc, char* argv[])
+{
+  for (int i = 0; i &lt; argc; ++i)
+  {
+    printf("param %d = ",i);
+    printf(argv[i]);
+    printf("\n");
+  }
+  return 0;
+}
+</pre>
+
+ShowParams.vbs
+<pre>If Wscript.Arguments.Count = 0 Then
+        Wscript.echo "No parameters found"
+Else
+    i=0
+        Do until i = Wscript.Arguments.Count
+        Parms = Parms &amp; "Param " &amp; i &amp; " = " &amp; Wscript.Arguments(i) &amp; " " &amp; vbcr
+        i = i+1
+        loop
+        Wscript.echo parms
+End If
+</pre>
+
+ShowParams.bat
+<pre>@echo off
+echo Param1 = %1
+echo Param2 = %2
+echo Param3 = %3
+</pre>
+
+<p>
+<big><b>*nix</b></big>
+<br>*nix handles command line arguments totally differently. On *nix, you launch a program using the
+<a href="http://linux.about.com/od/commands/l/blcmdl2_execve.htm">execve</a> API
+(or it's cousins execvp, execl, execlp, execle, and execvp). The interesting thing about these
+APIs is that they allow the <em>caller</em> to specify each of the command line arguments — the
+signature for execve is:
+</p><p>
+</p><blockquote>
+<b>int execve(const char *</b><i>filename</i><b>, char *const</b> <i>argv</i> <b>[], char *const</b> <i>envp</i><b>[]);</b>
+</blockquote>
+
+<p>In *nix, the shell is responsible for turning the string provided by the user into the <b>argv</b>
+parameter to the program.
+
+</p><p>Notes:
+<br><small>On *nix, even though the <b>execl()</b> API allows you to specify a command line string,
+the <b>execl()</b> API parses that command line string into <b>argv</b> and <b>argc</b> before calling
+execve.</small>
+
+</p><p>References:
+<br>•Microsoft Visual C++ Language Reference, "Parsing C++ Command-Line Arguments"
+<br><small><a href="http://msdn.microsoft.com/en-us/library/17w5ykft.aspx" target="_blank"><nobr>http://msdn.microsoft.com/en-us/library/17w5ykft.aspx</nobr></a></small>
+<br>•Larry Osterman's WebLog: The Windows command line is just a string
+<br><small><a href="http://blogs.msdn.com/larryosterman/archive/2007/10/03/the-windows-command-line-is-just-a-string.aspx" target="_blank"><nobr>http://blogs.msdn.com/larryosterman/archive/2007/10/03/the-windows-command-line-is-just-a-string.aspx</nobr></a></small>
+
+      </p></ul>
+    </li>
+  </ul>
+
+
+
+<span class="lh">A:</span><span class="header">&nbsp;&nbsp;RETRIEVING COMMAND LINE PARAMETERS</span>
+
+<pre>NumParams = %0%
+Param1 = %1%
+Param2 = %2%
+Param3 = %3%
+MsgBox NumParams = %0%
+MsgBox Param1 = %1%
+MsgBox Param2 = %2%
+MsgBox Param3 = %3%
+</pre>
+
+<br>
+<br>/******************************************************************************
+<br>
+<a name="B"><span class="lh">B:</span><span class="header">&nbsp;&nbsp;COMMON THINGS OFTEN FOUND AT THE BEGINNING OF AUTOHOTKEY SCRIPTS</span></a>
+<br>
+
+<pre>#NoTrayIcon              <span class="com">;if you don't want a tray icon for this AutoHotkey program.</span>
+#NoEnv                   <span class="com">;Recommended for performance and compatibility with future AutoHotkey releases.</span>
+#SingleInstance force    <span class="com">;Skips the dialog box and replaces the old instance automatically</span>
+<span class="com">;;SendMode Input           ;I discovered this causes MouseMove to jump as if Speed was 0. (was Recommended for new scripts due to its superior speed and reliability.)</span>
+SetKeyDelay, 90          <span class="com">;Any number you want (milliseconds)</span>
+CoordMode,Mouse,Screen   <span class="com">;Initial state is Relative</span>
+CoordMode,Pixel,Screen   <span class="com">;Initial state is Relative. Frustration awaits if you set Mouse to Screen and then use GetPixelColor because you forgot this line. There are separate ones for: Mouse, Pixel, ToolTip, Menu, Caret</span>
+MouseGetPos, xpos, ypos  <span class="com">;Save initial position of mouse</span>
+WinGet, SavedWinId, ID, A     <span class="com">;Save our current active window</span>
+
+<span class="com">;Set Up a Log File:</span>
+SetWorkingDir, %A_ScriptDir%  <span class="com">;Set default directory to where this script file is located. (Note %% because it's expecting and unquoted string)</span>
+LogFile := "MyLog.txt"
+FileAppend, This is a message`n, %LogFile%  <span class="com">;Note the trailing (`n) to start a new line. This could instead be a leading (`n) if you want. (Note %% because it's expecting and unquoted string)</span>
+</pre>
+
+and things at the end where we restore window and mouse cursor position:
+
+<pre>WinActivate ahk_id %SavedWinId%  <span class="com">;Restore original window</span>
+MouseMove, xpos, ypos, 10    <span class="com">;Restore original mouse position</span>
+ExitApp
+Esc::ExitApp  <span class="com">;Press ESC to cancel this script. Placed after the ExitApp.
+              ;Note this is a hotkey definition (we're defining the ESC key to run ExitApp). A
+              ;hotkey definition line stops execution at that point, so if you want the script
+              ;to run to the end but have the ESC key available to terminate the script, put
+              ;the hotkey definition at the end, just <i>after</i> your ExitApp statement.
+</span>
+</pre>
+
+<br>
+<br>
+
+<br>/******************************************************************************
+<br>
+<a name="C"><span class="lh">C:</span><span class="header">&nbsp;&nbsp;WHEN TO USE <font face="Courier New">%%</font> AROUND VARIABLES</span></a>
+<br>
+<br>
+<b>LESSON #1:</b>
+<br>
+<font face="Courier New">The only place to use %x% is where a literal string NOT enclosed in
+double-quotes is expected. Otherwise, don't use %% around a variable name.
+<br><br>
+Notice in the following examples that unquoted literal strings are expected.
+<br>( = assigns unquoted literal strings )
+</font>
+<br>
+
+<pre>n = Ishmael
+x = Call me %n%
+MsgBox %x%
+
+x = 500
+y = 500
+z = 10
+MouseMove, 500, 500, 10           <span class="com">;works</span>
+MouseMove, 500 - 1, 500 + 1, 10   <span class="com">;works</span>
+MouseMove,  x, y, z               <span class="com">;works</span>
+MouseMove,  x - 1, y + 1, z + 2   <span class="com">;works</span>
+
+<span class="com">;However, this doesn't work, because MouseMove</span>
+<span class="com">;doesn't expect an unquoted literal string</span>
+MouseMove, %x% - 1, %y% + 1, 10   <span class="com">;doesn't work</span>
+</pre>
+
+<b>&nbsp;&nbsp;&nbsp;&nbsp;Confusion is caused because the following also happens to work:</b>
+<br>
+
+<pre>MouseMove, %x%, %y%, %c%   <span class="com">;works because "for backward compatibility, command parameters that are
+                           ;documented as 'can be an expression' treat an isolated name in percent signs
+                           ;(e.g. %Var%, but not Array%i%) as though the percent signs are absent."
+                           ;        --AutoHotkey Documentation: Variables and Expressions</span>
+</pre>
+
+<br>
+<b>LESSON #2:</b>
+<br>
+<font face="Courier New">Use <b>(%x%)</b> (enclosed in parentheses) when x contains the name of a 2nd variable which in turn contains the contents you want.
+</font>
+<br>
+
+<pre>a = 500    <span class="com">;a = "500"</span>
+b = 200    <span class="com">;b = "200"</span>
+x := "a"
+y := "b"
+MouseMove, (%x%), (%y%)            <span class="com">;x = a, a = 500.  y = b, b = 200</span>
+MouseGetPos, xpos, ypos
+MsgBox xpos=%xpos%  ypos=%ypos%    <span class="com">;xpos=500  ypos=200</span>
+</pre>
+
+<br>
+<b>LESSON #3:</b>
+<br>
+<span class="cn">Instances which look like exceptions to the rule:</span>
+<br>
+
+<pre>MyDocument := "C:\Program Files\AutoHotkey\license.txt"
+Run, notepad.exe "%MyDocument%"
+</pre>
+<span class="cn">Looks like we're using %% inside a quoted string,
+but actually the "" are not required, just recommended.
+This happens to also work:</span>
+<pre>Run, notepad.exe %MyDocument%
+</pre>
+<span class="cn">The run function expects an unquoted string, so we use %%,
+otherwise notepad would try to open a file named 'MyDocument'.
+<br><br>
+In the first case above, the run function is actually accepting an unquoted
+string which happens to begin and end with a double quote character.</span>
+<br><br>
+
+<center><table width="%80%" border="0"><tbody><tr><td class="tn">
+<u><b>Tech Note</b></u><br>
+I believe the <b>Target</b> string in the AutoHotkey Run command is passed as the
+<b>command_line</b> parameter to the Windows <b>CreateProcess()</b> function. I see in AutoHotkey
+source file script.cpp routine Script::ActionExec the call to CreateProcess is:
+<pre><font color="Black">if (CreateProcess(NULL, command_line, NULL, NULL, FALSE, 0, NULL, aWorkingDir, &amp;si, &amp;pi))</font>
+</pre>
+MSDN documentaion for CreateProcess says, "If you are using a long file name that contains a space,
+use quoted strings to indicate where the file name ends and the arguments begin."
+<br><br>
+So the beginning and ending double quote characters are actually a part of the string being passed.
+<br><br>
+(05/29/2009 — I'm testing how AutoHotkey parses the Run command. I'll post the results when I'm done.)
+<br><br>
+<font size="-1">Reference:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;CreateProcess() : <a href="http://msdn.microsoft.com/en-us/library/ms682425(VS.85).aspx" target="_blank"><nobr>http://msdn.microsoft.com/en-us/library/ms682425.aspx</nobr></a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;CreateProcess() : <a href="http://msdn.microsoft.com/en-us/library/ms682425(VS.85).aspx" target="_blank"><nobr>http://msdn.microsoft.com/en-us/library/ms682425(VS.85).aspx</nobr></a></font>
+</td></tr></tbody></table></center>
+
+<br>
+<br>/******************************************************************************
+<br>
+<a name="D"><span class="lh">D:</span><span class="header">&nbsp;&nbsp;ERASE A VARIABLE</span></a>
+<br>
+
+<pre>v =
+v := ""
+</pre>
+
+<br>
+<br>/******************************************************************************
+<br>
+<a name="E"><span class="lh">E:</span><span class="header">&nbsp;&nbsp;SET A VARIABLE (:=)</span></a>
+<br>Use the colon-equal operator (:=) for storing numbers and quoted strings
+<br>
+<br>NOTE: All variables including numbers are stored as character strings.
+Strings are automatically converted to numbers when necessary,
+then converted back to strings when result is stored in a variable.
+
+<pre>ABC := "David"
+David := "Susan"
+
+v := "ABC"                      <span class="com">; v = "ABC"</span>
+MsgBox v := "ABC"`n`nv = "%v%"
+
+v := ABC                        <span class="com">; ABC is a variable. v = "David"</span>
+MsgBox v := ABC`n`nv = "%v%"
+
+v := %ABC%                      <span class="com">; ABC is a variable containing the name of a variable. v = "Susan"</span>
+MsgBox v := `%ABC`%`n`nv="%v%"  <span class="com">; NOTE: If ABC is undefined or blank, program halts!</span>
+
+v := "123"                      <span class="com">; v = "123" (quotes NOT included)</span>
+MsgBox v := "123"`n`nv = "%v%"
+
+v := 123                        <span class="com">; v = "123" (If it can be interpreted as a number then it's a number, otherwise it's a variable name.)</span>
+MsgBox v := 123`n`nv = "%v%"
+
+<span class="com">;123 can be made into a variable, as in this horrendous example:</span>
+123 := 456
+MsgBox v = %123%  <span class="com">; message is "v = 456"</span>
+</pre>
+
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+<a name="F"><span class="lh">F:</span><span class="header">&nbsp;&nbsp;SET A VARIABLE <font face="Courier New">(=)</font></span></a>
+<br> equal sign operator (=) to assign unquoted literal strings
+<br> To include variable ABC instead of literal string "ABC", use %ABC%
+<br>
+
+<pre>ABC = David
+David = Susan
+
+v =  123                        <span class="com">;v = "123"</span>
+MsgBox v = 123`n`nv = "%v%"
+
+v = 0001                        <span class="com">;v = "0001"</span>
+MsgBox v = 0001`n`nv = "%v%"
+
+v = ABC                         <span class="com">;v = "ABC"</span>
+MsgBox v = ABC`n`nv = "%v%"
+
+v = %ABC%                       <span class="com">;ABC is a variable. v = "David"</span>
+MsgBox v = `%ABC`%`n`nv = "%v%" (ABC = "David")
+
+;PROBABLY NOT WHAT YOU WANTED:
+v = "ABC"                       <span class="com">;v = the literal string "ABC" (including double-quotes)</span>
+MsgBox v = "ABC"`n`nv = '%v%'
+</pre>
+
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+<a name="G"><span class="lh">G:</span><span class="header">&nbsp;&nbsp;COPY A VARIABLE</span></a>
+<br>
+
+<pre>ABC := "David"
+David := "Susan"
+
+v := ABC                        <span class="com">; ABC is a variable. v = "David"</span>
+MsgBox v := ABC`n`nv = "%v%"
+v = %ABC%                       <span class="com">; ABC is a variable. v = "David"</span>
+MsgBox v = `%ABC`%`n`nv = "%v%"
+
+;PROBABLY NOT WHAT YOU WANTED:
+v = ABC                         <span class="com">; v = "ABC" (the literal string)</span>
+MsgBox v = ABC`n`nv = "%v%"
+v := %ABC%                      <span class="com">; ABC is a variable containing the name of a variable. v = "Susan"</span>
+MsgBox v := `%ABC`%`n`nv="%v%"  <span class="com">; NOTE: If ABC is undefined, PROGRAM HALTS!
+                                        (If David is undefined, then v = "")</span>
+</pre>
+
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+<a name="H"><span class="lh">H:</span><span class="header">&nbsp;&nbsp;IF STATEMENTS with <font face="Courier New">()</font></span></a>
+<br>
+
+<pre>SAT := "Saturday"          <span class="com">;Another way to view this is:</span>
+Saturday := "Saturn"       <span class="com">;  SAT --&gt; Saturday --&gt; Saturn</span>
+MON := "Monday"            <span class="com">;  MON --&gt; Monday --&gt; Moon</span>
+Monday := "Moon"
+
+MsgBox SAT := "Saturday"`nSaturday := "Saturn"`nMON := "Monday"`nMonday := "Moon"`n`n(another way to view this:)`nSAT --&gt; Saturday --&gt; Saturn`nMON --&gt; Monday --&gt; Moon`n`n#16
+
+<span class="com">; =</span>
+If ("Saturday" = "Saturday")
+  MsgBox ("Saturday" = "Saturday")
+If ("Saturday" = "SATURDAY")
+  MsgBox ("Saturday" = "SATURDAY")
+
+<span class="com">; ==  (case sensitive compare)</span>
+If ("Saturday" == "Saturday")              <span class="com">;== Case Sensitive</span>
+  MsgBox ("Saturday" == "Saturday")
+If ("Saturday" == "SATURDAY")              <span class="com">;== Case Sensitive</span>
+  MsgBox NO
+
+<span class="com">;SAT = "Saturday"</span>
+If (SAT = "Saturday")       <span class="com">;SAT = "Saturday", compare with "Saturday"</span>
+  MsgBox (SAT = "Saturday")
+If ("Saturday" = SAT)       <span class="com">;Reverse works the same</span>
+  MsgBox ("Saturday" = SAT)
+If (SAT = "xxxxx")
+  MsgBox NO
+If ("xxxxx" = SAT)
+  MsgBox NO
+
+<span class="com">;%SAT% = "Saturn"</span>
+If ("Saturn" = "Saturn")
+  MsgBox ("Saturn" = "Saturn")
+If (%SAT% = "Saturn")  <span class="com">;SAT = "Saturday", %SAT% = "Saturn", compare with "Saturn" (no problem if SAT not defined)</span>
+  MsgBox (`%SAT`% = "Saturn")`n`n(no problem if SAT not defined)
+If ("Saturn" = %SAT%)  <span class="com">;Reverse works the same (no problem if SAT not defined)</span>
+  MsgBox ("Saturn" = `%SAT`%)`n`n(no problem if SAT not defined)
+If ("xxxxx" = %SAT%)   <span class="com">;compare "xxxxx" with "Saturn"</span>
+  MsgBox NO
+If (%SAT% = "xxxxx")   <span class="com">;compare "Saturn" with "xxxxx"</span>
+  MsgBox NO
+
+<span class="com">;"Moon" = %MON%</span>
+If ("Moon" = "Moon")
+  MsgBox ("Moon" = "Moon")
+If (%MON% = "Moon")    <span class="com">;MON = "Monday", Monday = "Moon", compare with "Moon" (no problem if MON not defined)</span>
+  MsgBox (%MON% = "Moon")`n`nMON = "Monday", Monday = "Moon", compare with "Moon"`n`n(no problem if MON not defined)
+If ("Moon" = %MON%)    <span class="com">;"Moon", compare with MON = "Monday", Monday = "Moon" (no problem if MON not defined)</span>
+  MsgBox ("Moon" = `%MON`%)`n`n"Moon", compare with MON = "Monday", Monday = "Moon"`n`n(no problem if MON not defined)
+If ("xxxxx" = %MON%)   <span class="com">;compare "xxxxx" with "Moon"</span>
+  MsgBox NO
+If (%MON% = "xxxxx")   <span class="com">;compare "Moon" with "xxxxx"</span>
+  MsgBox NO
+
+<span class="com">;SAT =? MON</span>
+If (SAT = MON)      <span class="com">;Compare "Saturday" = "Monday" [SAT = "Saturday", MON = "Monday"]</span>
+  MsgBox NO
+If (SAT &lt; MON)      <span class="com">;"Saturday" &lt; "Moon"</span>
+  MsgBox NO
+If (SAT &gt; MON)      <span class="com">;"Saturday" &gt; "Moon"  [S &gt; M]</span>
+  MsgBox (SAT &gt; MON)`n`n"Saturday" &gt; "Monday"`n`n[S &gt; M]
+
+<span class="com">;SAT =? %MON%</span>
+If (SAT = %MON%)    <span class="com">;Compare "Saturday" = "Moon". [SAT = "Saturday", compare with MON = "Monday", Monday = "Moon"]</span>
+  MsgBox NO
+If (SAT &lt; %MON%)    <span class="com">;"Saturday" &lt; "Moon"</span>
+  MsgBox NO
+If (SAT &gt; %MON%)    <span class="com">;"Saturday" &gt; "Moon"  [S &gt; M]</span>
+  MsgBox (SAT &gt; `%MON`%)`n`n"Saturday" &gt; "Moon"   [S &gt; M]`n`nSAT = "%SAT%",`nMON = "%MON%", %MON% = "Moon"
+
+<span class="com">;%SAT% =? MON</span>
+If (%SAT% = MON)    <span class="com">;Compare "Saturn" = "Monday". [SAT = "Saturday", Saturday = "Saturn", MON = "Monday"]</span>
+  MsgBox NO
+If (%SAT% &lt; MON)    <span class="com">;"Saturn" &lt; "Monday"</span>
+  MsgBox NO
+If (%SAT% &gt; MON)    <span class="com">;"Saturn" &gt; "Monday"  [S &gt; M]</span>
+  MsgBox (`%SAT`% &gt; MON)`n`nSAT = "Saturday", %SAT% = "Saturn", compare with MON = "Monday"`n`n"Saturn" &gt; "Moon"`n`n[S &gt; M]
+
+<span class="com">;%SAT% =? %MON%</span>
+If (%SAT% = %MON%)  <span class="com">;Compare "Saturn" = "Moon". [SAT = "Saturday", Saturday = "Saturn", compare with MON = "Monday", Monday = "Moon"]</span>
+  MsgBox NO
+If (%SAT% &lt; %MON%)  <span class="com">;"Saturn" &lt; "Moon"</span>
+  MsgBox NO
+If (%SAT% &gt; %MON%)  <span class="com">;"Saturn" &gt; "Moon"  [S &gt; M]</span>
+  MsgBox (`%SAT`% &gt; `%MON`%)`n`nSAT = "Saturday", %SAT% = "Saturn", compare with`nMON = "Monday", %MON% = "Moon"`n`n"Saturn" &gt; "Moon"`n`n[S &gt; M]
+</pre>
+
+<br><a name="H2"><span class="lh">H2: Comparing Numeric Values vs. Comparing Strings</span></a>
+<br>
+If they can both be interpreted as numbers, then they are compared as numbers. Otherwise they are compared as strings.
+<br>
+
+<pre><span class="com">;COMPARING NUMERIC VALUES VS. COMPARING STRINGS     if statements with ()</span>
+x = 05           <span class="com">; x = "05"</span>
+if (x &gt; 3.14)    <span class="com">; (5 &gt; 3.14) ?  Compare numeric values, since both can be interpreted as numeric values.</span>
+  MsgBox if (x &gt; 3.14)`nwith x = "05"`n`nCompare numeric values, since both "05" and "3.14" can be interpreted as numbers.`n(5 &gt; 3.14) ?`nyes
+else
+  MsgBox xxxxxx
+
+if (x &gt; "3.14")  <span class="com">; ("05" &gt; "3.14") ?  Compare strings, since "3.14" is explicitly a string. (The " " around 3.14 say it's a string, not a number, so do a string compare.)</span>
+  MsgBox xxxxxx
+else
+  MsgBox if (x &gt; "3.14")`nwith x = "05"`n`nCompare strings, since "3.14" is explicitly a string.`nThe " " around "3.14" say it's a string, not a number, so do a string compare.`n("05" &gt; "3.14") ?`n("0" &gt; "3") ?`n(48 &gt; 51) ?`nno
+
+
+<span class="com">; ASCII table:
+;   /  47
+;   0  48
+;   1  49
+;   2  50
+;   3  51
+;   4  52
+;   5  53
+;   6  54
+;   7  55
+;   8  56
+;   9  57
+;   :  58
+;DEREFERENCE TESTS</span>
+y := "x"
+
+<span class="com">;Compare %y% with 3.14</span>
+x = 03             <span class="com">; x = "03"</span>
+if (%y% &gt; 3.14)    <span class="com">; (3 &gt; 3.14) ?</span>
+  MsgBox xxxxxx
+else
+  MsgBox if (`%y`% &gt; 3.14)`nwith y = "x"`nand x = "03"`n`nCompare numeric values, since both "03" and "3.14" can be interpreted as numbers.`n(3 &gt; 3.14) ?`nno
+
+x = 05             <span class="com">; x = "05"</span>
+if (%y% &gt; 3.14)    <span class="com">; (5 &gt; 3.14) ?</span>
+  MsgBox if (`%y`% &gt; 3.14)`nwith y = "x"`nand x = "05"`n`nCompare numeric values, since both "05" and "3.14" can be interpreted as numbers.`n(5 &gt; 3.14) ?`nyes
+else
+  MsgBox NO
+
+<span class="com">;Compare %y% with "3.14"</span>
+x = 03               <span class="com">; x = "03"</span>
+if (%y% &gt; "3.14")    <span class="com">; ("03" &gt; "3.14") ?</span>
+  MsgBox xxxxxx
+else
+  MsgBox if (`%y`% &gt; "3.14")`nwith y = "x"`nand x = "03"`n`nCompare strings, since "3.14" is explicitly a string.`nThe " " around "3.14" say it's a string, not a number, so do a string compare.`n("03" &gt; "3.14") ?`n("0" &gt; "3") ?`n(48 &gt; 51) ?`nno
+
+x = 05               <span class="com">; x = "05"</span>
+if (%y% &gt; "3.14")    <span class="com">; ("05" &gt; "3.14") ?</span>
+  MsgBox xxxxxx
+else
+  MsgBox if (`%y`% &gt; "3.14")`nwith y = "x"`nand x = "05"`n`nCompare strings, since "3.14" is explicitly a string.`nThe " " around "3.14" say it's a string, not a number, so do a string compare.`n("05" &gt; "3.14") ?`n("0" &gt; "3") ?`n(48 &gt; 51) ?`nno
+
+x := "/"             <span class="com">; x = "/"</span>
+if (%y% &gt; "3.14")    <span class="com">; ("/" &gt; "3.14") ?</span>
+  MsgBox xxxxxx
+else
+  MsgBox if (`%y`% &gt; "3.14")`nwith y = "x"`nand x = "/"`n`nCompare strings, since "3.14" is explicitly a string.`nThe " " around "3.14" say it's a string, not a number, so do a string compare.`n("/" &gt; "3.14") ?`n("/" &gt; "3") ?`n(47 &gt; 51) ?`nno
+
+x := ":"             <span class="com">; x = ":"</span>
+if (%y% &gt; "3.14")    <span class="com">; (":" &gt; "3.14") ?</span>
+  MsgBox if (`%y`% &gt; "3.14")`nwith y = "x"`nand x = ":"`n`nCompare strings, since "3.14" is explicitly a string.`nThe " " around "3.14" say it's a string, not a number, so do a string compare.`n(":" &gt; "3.14") ?`n(":" &gt; "3") ?`n(58 &gt; 51) ?`nyes
+else
+  MsgBox xxxxxx
+</pre>
+
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+<a name="I"><span class="lh">I:</span><span class="header">&nbsp;&nbsp;IF STATEMENTS without <font face="Courier New">()</font></span></a>
+<br> Translate the 1st, take the 2nd literally
+<br>
+
+<pre>SAT := "Saturday"          <span class="com">;Another way to view this is:</span>
+Saturday := "Saturn"       <span class="com">;  SAT --&gt; Saturday --&gt; Saturn</span>
+MON := "Monday"            <span class="com">;  MON --&gt; Monday --&gt; Moon</span>
+Monday := "Moon"
+
+MsgBox SAT := "Saturday"`nSaturday := "Saturn"`nMON := "Monday"`nMonday := "Moon"`n`n(another way to view this:)`nSAT --&gt; Saturday --&gt; Saturn`nMON --&gt; Monday --&gt; Moon
+
+<span class="com">;SAT</span>
+<span class="com">; If "Saturday" = .... illegal</span>
+If SAT = Saturday    <span class="com">;SAT = "Saturday", compare with "Saturday"</span>
+  MsgBox If SAT = Saturday`n`nSaturday = Saturday
+If SAT = %Saturday%  <span class="com">;SAT = "Saturday", compare with %Saturday% = "Saturn"</span>
+  MsgBox NO
+If SAT = SAT         <span class="com">;SAT = "Saturday", compare with "SAT"</span>
+  MsgBox NO
+If SAT = %SAT%       <span class="com">;SAT = "Saturday", compare with %SAT% = "Saturday"</span>
+  MsgBox If SAT = `%SAT`%`n`nSaturday = Saturday
+
+<span class="com">;%SAT%</span>
+;NOTE: if SAT is undefined or blank, program will halt!
+If %SAT% = Saturn   <span class="com">;SAT = "Saturday", Saturday = "Saturn", compare with "Saturn"</span>
+  MsgBox If `%SAT`% = Saturn`n`nSAT = "%SAT%", `%Saturday`% = %Saturday%, compare with "Saturn"`n`n(Note: if SAT is undefined or blank, program will halt!)
+If %SAT% = xxxxx   <span class="com">;SAT = "Saturday", Saturday = "Saturn", compare with "xxxxx"</span>
+  MsgBox NO
+
+<span class="com">;Saturday</span>
+If Saturday = Saturn   <span class="com">;Saturday = "Saturn", compare with "Saturn"</span>
+  MsgBox Saturday = Saturn`n`nSaturday="%Saturday%",compare with "Saturn"
+If Saturday = xxxxx   <span class="com">;Saturday = "Saturn", compare with "xxxxx"</span>
+  MsgBox NO
+
+<span class="com">;%Saturday%</span>
+<span class="com">;NOTE: if SATURDAY is undefined or blank, program will halt!</span>
+If %Saturday% =       <span class="com">;Saturday = "Saturn", Saturn = &lt;nothing&gt;, compare with &lt;nothing&gt;</span>
+  MsgBox If `%Saturday`% = `n`nSaturday=%Saturday%, Saturn=&lt;nothing&gt;, compare with &lt;nothing&gt;`n`n(NOTE: if SATURDAY is undefined or blank, program will halt!)
+If %Saturday% = %Saturn%  <span class="com">;Saturday = "Saturn", Saturn = &lt;nothing&gt;, compare with %Saturn% = &lt;nothing&gt; (&lt;nothing&gt; = &lt;nothing&gt;)</span>
+  MsgBox if `%Saturday`% = `%Saturn`%`n`nSaturday=%Saturday%, Saturn=&lt;nothing&gt;`ncompare with`%Saturn`% = &lt;nothing&gt;`n`n&lt;nothing&gt;=&lt;nothing&gt;
+If %Saturday% = xxxxx <span class="com">;Saturday = "Saturn", Saturn = &lt;nothing&gt;, compare with "xxxxx"</span>
+  MsgBox NO
+If %Saturday% = ""    <span class="com">;Saturday = "Saturn", Saturn = &lt;nothing&gt;, compare with literal two double-quotes (a string containing two characters, both double-quotes)</span>
+  MsgBox NO
+</pre>
+
+<br><a name="I2"><span class="lh">I2: Comparing Numeric Values vs. Comparing Strings</span></a>
+<br>
+If they can both be interpreted as numbers, then they are compared as numbers. Otherwise they are compared as strings.
+<br>
+<pre>I2:
+<span class="com">;COMPARING NUMERIC VALUES VS. COMPARING STRINGS     if statements without ()
+; ASCII table:
+;   !  33
+;   "  34
+;   #  35
+;   0  48</span>
+
+x = 03            <span class="com">; x = "03"</span>
+if x &gt; 3.14       <span class="com">; 3 &gt; 3.14  (Compare numeric values, since both can be interpreted as numeric values)</span>
+  MsgBox xxxxxx
+else
+  MsgBox if x &gt; 3.14`nwith x=%x%`n`nCompare numeric values, since both can be interpreted as numeric values`n3 &gt; 3.14 ?`nno
+
+x = 05            <span class="com">; x = "05"</span>
+if x &gt; 3.14       <span class="com">; 5 &gt; 3.14  (Compare numeric values, since both can be interpreted as numeric values)</span>
+  MsgBox if x &gt; 3.14`nwith x=%x%`n`nCompare numeric values, since both can be interpreted as numeric values`n5 &gt; 3.14 ?`nyes
+else
+  MsgBox xxxxxx
+
+x = 03            <span class="com">; x = "03"</span>
+if x &gt; "3.14"     <span class="com">; compare string '03' with string '"3.14"' (double quotes are part of the string). Compare ascii 0 in 03 with leading quotation mark in "3.14" (48 &gt; 34 ?) Yes.</span>
+  MsgBox if x &gt; "3.14"`nwith x=%x%`n`nDouble quotes are part of the string "3.14"`nso string compare 03 with "3.14"`ncompare leading '0' in 03 with leading quotation mark in "3.14"`nascii(0) = 48`nascii(") = 34`n48 &gt; 34 (?)`nyes
+else
+  MsgBox xxxxxx
+
+x = !             <span class="com">; x = '!' (ascii 33)</span>
+if x &gt; "3.14"     <span class="com">;compare string '!' with string '"3.14"' (double quotes are part of the string). Compare ascii ! with leading quotation mark in "3.14" (48 &gt; 34 ?) Yes.</span>
+<span class="com">; (! &gt; ")?  --&gt; (33 &gt; 34) ? no</span>
+  MsgBox xxxxxx
+else
+ MsgBox if x &gt; "3.14"`nwith x=%x%`nno`n`ncompare ascii ! with leading quotation mark in "3.14"`nascii(!) = 33`nascii(") = 34`n(33 &gt; 34)?`nno
+
+x = #             <span class="com">; x = '#' (ascii 35)</span>
+if x &gt; "3.14"     <span class="com">; (! &gt; ")?  --&gt; (35 &gt; 34) ? yes</span>
+  MsgBox if x &gt; "3.14"`nwith x=%x%`nyes`n`ncompare ascii # with leading quotation mark in "3.14"`nascii(#) = 35`nascii(") = 34`n(35 &gt; 34)?`nyes
+else
+  MsgBox xxxxxx
+
+
+<span class="com">; ASCII table:
+;   !  33
+;   "  34
+;   #  35
+;   0  48
+;DEREFERENCE TESTS</span>
+y := "x"
+
+<span class="com">;compare %y% with 3.14</span>
+x = 03            <span class="com">; x = "03"</span>
+if %y% &gt; 3.14     <span class="com">; 3 &gt; 3.14 (?)</span>
+  MsgBox xxxxxx
+else
+  MsgBox if `%y`% &gt; 3.14`nwith y := "x"`nand x = "03"`n`nCompare numeric values, since both "03" and "3.14" can be interpreted as numbers.`n3 &gt; 3.14 (?)`nno
+
+x = 05            <span class="com">; x = "05"</span>
+if %y% &gt; 3.14     <span class="com">; 5 &gt; 3.14 (?)</span>
+  MsgBox if `%y`% &gt; 3.14`nwith y := "x"`nand x = "05"`n`nCompare numeric values, since both "05" and "3.14" can be interpreted as numbers.`n5 &gt; 3.14 (?)`nyes
+else
+  MsgBox xxxxxx
+
+
+<span class="com">;compare %y% with "3.14"</span>
+x = 03            <span class="com">; x = "03"</span>
+if %y% &gt; "3.14"   <span class="com">; Double quotes are part of the string "3.14" so string compare '03' with string '"3.14"'. Compare ascii 0 in 03 with leading quotation mark in "3.14" (48 &gt; 34 ?) Yes.</span>
+  MsgBox if `%y`% &gt; "3.14"`nwith y := "x"`nand x=%x%`n`nDouble quotes are part of the string "3.14"`nso string compare 03 with "3.14"`ncompare leading '0' in 03 with leading quotation mark in "3.14"`nascii(0) = 48`nascii(") = 34`n48 &gt; 34 (?)`nyes
+else
+  MsgBox xxxxxx
+
+x = !             <span class="com">; x = '!' (ascii 33)</span>
+if x &gt; "3.14"     <span class="com">;Double quotes are part of the string "3.14" so string compare '!' with string '"3.14"'. Compare '!' with leading quotation mark in "3.14" (48 &gt; 34 ?) Yes.</span>
+  MsgBox xxxxxx
+else
+  MsgBox if `%y`% &gt; "3.14"`nwith y := "x"`nand x=%x%`n`nDouble quotes are part of the string "3.14"`nso string compare ! with "3.14"`ncompare '!' with leading quotation mark in "3.14"`nascii(!) = 33`nascii(") = 34`n33 &gt; 34 (?)`nno
+
+x = #             <span class="com">; x = '#' (ascii 35)</span>
+if x &gt; "3.14"     <span class="com">; (! &gt; ")?  --&gt; (35 &gt; 34) ? yes</span>
+  MsgBox if `%y`% &gt; "3.14"`nwith y := "x"`nand x=%x%`n`nDouble quotes are part of the string "3.14"`nso string compare # with "3.14"`ncompare '#' with leading quotation mark in "3.14"`nascii(#) = 35`nascii(") = 34`n35 &gt; 34 (?)`nyes
+else
+  MsgBox xxxxxx
+</pre>
+
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+<a name="J"><span class="lh">J:</span><span class="header">&nbsp;&nbsp;CHECK FOR A BLANK VARIABLE</span></a>
+<br> (or undefined variable)
+<br>
+
+<pre>v := ""
+
+If v =
+  MsgBox v = ""
+
+If (v = "")
+  MsgBox v = ""
+</pre>
+
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+<a name="K"><span class="lh">K:</span><span class="header">&nbsp;&nbsp;STRING MANIPULATION</span></a>
+<br>
+
+<br><a name="K1"><span class="lh">K1: Trim whitespace at the START of a string</span></a>
+<pre><span class="com">;Trim whitespace at the START of a string:</span>
+v := "     0001     "
+MsgBox v="%v%"
+v := RegExReplace( v, "\A\s+" )
+MsgBox v="%v%"                  <span class="com">;v = "0001     "</span>
+</pre>
+
+<br><a name="K2"><span class="lh">K2: Trim whitespace at the END of a string</span></a>
+<pre><span class="com">;Trim whitespace at the END of a string:</span>
+v := "     0001     "
+MsgBox v="%v%"
+v := RegExReplace( v, "\s+\z" )
+MsgBox v="%v%"                  <span class="com">;v = "     0001"</span>
+</pre>
+
+<br>
+<br><a name="K3"><span class="lh">K3: Trim whitespace at the START AND END of a string</span></a>
+<br><a name="K3a"><span class="lh2">K3a:</span></a>
+<pre><span class="com">;Trim whitespace at the START AND END of a string:</span>
+v := "     0001     "
+MsgBox v="%v%"
+v := RegExReplace( v, "(^\s+)|(\s+$)")
+MsgBox v="%v%"                  <span class="com">;v = "0001"</span>
+</pre>
+
+<a name="K3b"><span class="lh2">K3b:</span></a>
+<pre><span class="com">;Trim whitespace at the START AND END of the string:</span>
+v := "     0001     "
+MsgBox v="%v%"
+v = %v%                         <span class="com">;v = "0001" (AutoTrim ON by default)</span>
+MsgBox v="%v%"
+</pre>
+
+<br>
+<br><a name="K4"><span class="lh">K4: Concatenate Two Strings Together</span></a>
+<pre><span class="com">;CONCATENATE TWO STRINGS TOGETHER</span>
+SAT := "Saturday"
+MON := "Monday"
+Saturday := "Saturn"
+Monday := "Moon"
+
+
+<span class="com">; using =</span>
+v = %SAT%%MON%      <span class="com">; v = "SaturdayMonday"</span>
+MsgBox v = "%v%"
+
+
+<span class="com">; using :=</span>
+v := "Saturday" . "Monday"  <span class="com">; v = "SaturdayMonday"</span>
+MsgBox v = "%v%"
+
+v := SAT . MON      <span class="com">; v = "SaturdayMonday" (there must be a SPACE before and after dot)</span>
+MsgBox v = "%v%"
+
+v := %SAT% . MON    <span class="com">; v = "SaturnMonday"</span>
+MsgBox v = "%v%"
+
+v := SAT . %MON%    <span class="com">; v = "SaturdayMoon"</span>
+MsgBox v = "%v%"
+
+v := %SAT% . %MON%  <span class="com">; v = "SaturnMoon"</span>
+MsgBox v = "%v%"
+</pre>
+
+<br>
+<br><a name="K5"><span class="lh">K5: Two ways of using MsgBox</span></a>
+<br>This is a good place to mention the two ways of using MsgBox:
+<pre>Msgbox Var = %Var%
+<span class="com">; OR</span>
+Msgbox % "Var = " . Var
+<span class="com">;  string-^^^^^^  | ^^^-variable name</span>
+<span class="com">;           Concatenate</span>
+</pre>
+
+<br>
+<a name="K6"><span class="lh">K6:</span></a>
+<br>SEE ALSO:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Library for Text File Manipulation
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<font size="-1"><a href="http://www.autohotkey.net/~heresy/Functions/TXT.ahk" target="_blank"><nobr>http://www.autohotkey.net/~heresy/Functions/TXT.ahk</nobr></a></font>
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+<a name="L"><span class="lh">L:</span><span class="header">&nbsp;&nbsp;NUMBERS</span></a>
+<br><b>NOTE: All variables are stored as character strings.</b>
+<br>Strings are automatically converted to numbers when necessary,
+<br>then converted back to strings when result is stored in a variable.
+<br>
+<br><a name="L1"><span class="lh">L1: Adding numbers together</span></a>
+<br>
+<pre><span class="com">;Adding numbers together</span>
+v := "123"
+v += 1
+MsgBox v = "%v%"     <span class="com">; v &lt;- "124"</span>
+
+v := "123"
+v := v + 1
+MsgBox v = "%v%"     <span class="com">; v &lt;- "124"</span>
+
+;PROBABLY NOT WHAT YOU WANTED:
+v = 123            <span class="com">; v &lt;- "123" (the literal string)</span>
+v = v + 1          <span class="com">; v &lt;- "v + 1" (the literal string)</span>
+MsgBox v = "%v%"
+</pre>
+
+
+<br><a name="L2"><span class="lh">L2: Adding two strings together</span></a>
+<br>
+<pre><span class="com">;Adding two strings together</span>
+<span class="com">;when both can be interpreted as integers, gives the resulting integer (as a string)</span>
+v1 := 123
+v2 := 456
+v := v1 + v2       <span class="com">; v &lt;- "579"</span>
+MsgBox v = "%v%"
+
+;when one or both can be interpreted as float, gives the resulting float (as a string)
+v1 := 1.23
+v2 := 45.6
+v := v1 + v2       <span class="com">; v &lt;- "46.830000"</span>
+MsgBox v = "%v%"
+
+;When one or both can NOT be interpreted as a number, result is an empty string
+v1 := "123"
+v2 := "Susan"
+v := v1 + v2       <span class="com">; v &lt;- "" (empty string)</span>
+MsgBox v = "%v%"
+</pre>
+
+
+<br><a name="L3"><span class="lh">L3: Remove leading/trailing blanks/zeros from a number</span></a>
+<br>
+<pre><span class="com">;Remove leading zeros from a number</span>
+v := 0001             <span class="com">;v = "0001"</span>
+v += 0                <span class="com">;v converted to integer, add zero, convert back to string</span>
+MsgBox v = "%v%"      <span class="com">;v = "1" (the literal string "1"</span>
+
+<span class="com">;Remove leading blanks and trailing blanks from a number</span>
+v := "     1     "
+MsgBox v = "%v%"      <span class="com">;v = "     1     "</span>
+v += 0                <span class="com">;v converted to integer, add zero, convert back to string</span>
+MsgBox v = "%v%"      <span class="com">;v = "1" (the literal string "1"</span>
+
+<span class="com">;Remove leading and trailing blanks and leading zeros from a number</span>
+v := "     0001     "
+MsgBox v = "%v%"      <span class="com">;v = "     0001     "</span>
+v += 0                <span class="com">;v converted to integer, add zero, convert back to string</span>
+MsgBox v = "%v%"      <span class="com">;v = "1" (the literal string "1"</span>
+
+<span class="com">;(yea it's all the same. Just do v += 0)</span>
+</pre>
+
+
+<br><a name="L4"><span class="lh">L4: Pad a number with leading zeros or spaces</span></a>
+<br>/************************************************
+<br>  VARIOUS WAYS TO PAD A NUMBER WITH LEADING ZEROS OR SPACES
+<br>  (To pad with spaces, substitute spaces for the zeros.)
+<br>
+<br><a name="L4.1"><span class="lh">L4.1: Method #1: SubStr</span></a>
+
+<pre><span class="com">;PAD A NUMBER WITH LEADING ZEROS OR SPACES — Method #1: SUBSTR</span>
+<span class="com">; Documentation on SubStr: "If StartingPos is less than 1, it is</span>
+<span class="com">; considered to be an offset from the end of the string. For example, 0</span>
+<span class="com">; extracts the last character and -1 extracts the two last characters."</span>
+v := 123
+            <span class="com">;....v....1                   ....v....1</span>
+v := SubStr("0000000000" . v, -9)  <span class="com">; v = "0000000123"</span>
+MsgBox v = "%v%"
+
+v := SubStr("abcdefghij" . v, -9)  <span class="com">; v = "defghij123"  (easier to see what's happening)</span>
+MsgBox v = "%v%"
+</pre>
+
+<br><a name="L4.2"><span class="lh">L4.2: Method #2: StringRight</span></a>
+<pre><span class="com">;PAD A NUMBER WITH LEADING ZEROS OR SPACES — Method #2: StringRight</span>
+v := 123
+     ;....v....1              ....v....1...
+v := "0000000000" . v  <span class="com">; v = "0000000000123"  ( or could use v = "0000000000"%v% )</span>
+StringRight, v, v, 10  <span class="com">; v =    "0000000123"</span>
+MsgBox v = "%v%"
+</pre>
+
+<br><a name="L4.3"><span class="lh">L4.3: Method #3: sprintf()</span></a>
+<pre><span class="com">;PAD A NUMBER WITH LEADING ZEROS OR SPACES — Method #3: sprintf()</span>
+StrIn := "1234"
+size := VarSetCapacity(StrOut, 8)  <span class="com">;want StrOut to hold 8 digits</span>
+
+<span class="com">;pad with zeros</span>
+DllCall("msvcrt\sprintf", Str, StrOut, Str, "%08d", "Int", StrIn )  <span class="com">;pad with zeros</span>
+MsgBox, 0, Zeros, size=%size%`nStrIn = %StrIn%`nStrOut = %StrOut%   <span class="com">;StrOut = "00000123"</span>
+
+<span class="com">;pad with blanks</span>
+DllCall("msvcrt\sprintf", Str, StrOut, Str,  "%8d", "Int", StrIn )  <span class="com">;pad with blanks</span>
+MsgBox, 0, Spaces, size=%size%`nStrIn = %StrIn%`nStrOut = %StrOut%  <span class="com">;StrOut = "     123"</span>
+</pre>
+
+
+<br><a name="L4.4"><span class="lh">L4.4: Method #4: Prepend leading zeros</span></a>
+<pre><span class="com">;PAD A NUMBER WITH LEADING ZEROS OR SPACES — Method #4: Prepend leading zeros</span>
+v = 123
+Loop, % 9-StrLen(v)            <span class="com">; (9 for 9 digits total)</span>
+    v = 0%v%                   <span class="com">; OR: v := 0 . v</span>
+MsgBox, 0, Zeros, v = "%v%"    <span class="com">; v = "000000123"</span>
+
+<span class="com">;Prepend leading spaces</span>
+v = 123
+Loop, % 9-StrLen(v)            <span class="com">; (9 for 9 digits &amp; spaces total)</span>
+    v := A_Space . v         <span class="com">; OR: v := " " . v</span>
+MsgBox, 0, Spaces, v = "%v%"   <span class="com">; v = "      123"</span>
+</pre>
+
+<br><a name="L4.5"><span class="lh">L4.5: Method #5: SetFormat</span></a>
+<pre><span class="com">;PAD A NUMBER WITH LEADING ZEROS OR SPACES — Method #5: Using SetFormat</span>
+<span class="com">;(Note: Be wary of converting an integer to a float and back to an integer.</span>
+<span class="com">; An integer has 32 bits of data, whereas a float has only 27 bits of data.)</span>
+v = 1234
+SetFormat, Float, 08.0 <span class="com">; (08 for zero padded 8 digits total, .0 for zero decimal places)</span>
+v += 0.0               <span class="com">; v converted to float, add zero, convert back to string</span>
+MsgBox v = %v%         <span class="com">; v = '00001234'</span>
+
+v = 1234
+SetFormat, Float, 8.0  <span class="com">; (8 for space padded 8 digits &amp; spaces total, .0 for zero decimal places)</span>
+v += 0.0               <span class="com">; v converted to float, add zero, convert back to string</span>
+MsgBox v = %v%         <span class="com">; v = '    1234'</span>
+</pre>
+
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+<a name="M"><span class="lh">M:</span></a><span class="header">&nbsp;&nbsp;working with FILE NAMES</span>
+<br>
+
+<pre><span class="com">;Set/Show Working Directory</span>
+SetWorkingDir,%A_ScriptDir%
+MsgBox A_WorkingDir=%A_WorkingDir%
+
+<span class="com">;Creating a File  (note: directory must exist)</span>
+FileAppend, test 10, MyFile10.log           <span class="com">;&lt;WorkingDir&gt;\MyFile10.log</span>
+FileAppend, test 11, \MyFile11.log          <span class="com">;C:\MyFile11.log</span>
+FileAppend, test 12, SubDir\MyFile12.log    <span class="com">;&lt;WorkingDir&gt;\SubDir\MyFile12.log</span>
+FileAppend, test 13, SubDir\\\\\\\\\\\\\MyFile13.log   <span class="com">;&lt;WorkingDir&gt;\SubDir\MyFile13.log Doesn't seem to matter how many extra \</span>
+V := "C:\TEMP"
+FileAppend, test 14, %V%MyFile14.log        <span class="com">;C:\TEMPMyFile14.log</span>
+FileAppend, test 15, %V%\MyFile15.log       <span class="com">;C:\TEMP\MyFile15.log</span>
+FileAppend, test 16, %V%\\\\\\\\\\\MyFile16.log   <span class="com">;C:\TEMP\MyFile16.log  Doesn't seem to matter how many extra \</span>
+FileAppend, test 17, ..\MyFile17.log        <span class="com">;Up one directory from WorkingDir. &lt;WorkingDir-^&gt;\MyFile17.log</span>
+MsgBox ErrorLevel=%ErrorLevel%              <span class="com">;FileAppend test for error. 0=SUCCESS, 1=FAIL</span>
+</pre>
+
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+<a name="N"><span class="lh">N:</span></a><span class="header">&nbsp;&nbsp;REGULAR EXPRESSIONS</span>
+<br>(Note: AutoHotkey uses PCRE Perl-compatible format)
+<br>
+<br>
+<a name="N1"><span class="lh">N1:</span></a><span class="header">&nbsp;&nbsp;Regular Expression RESOURCES</span>
+<br>
+<br>CHEAT SHEETS
+<br>  Regular Expressions (RegEx) - Quick Reference: <a href="http://www.autohotkey.com/docs/misc/RegEx-QuickRef.htm" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/docs/misc/RegEx-QuickRef.htm</font></nobr></a>
+<br>  Regular Expression Cheat Sheet: <a href="http://regexlib.com/CheatSheet.aspx" target="_blank"><nobr><font size="-1">http://regexlib.com/CheatSheet.aspx</font></nobr></a>
+<br>  One Page Reference Cheat Sheet: <a href="http://www.regular-expressions.info/reference.html" target="_blank"><nobr><font size="-1">http://www.regular-expressions.info/reference.html</font></nobr></a>
+<br>      Replacement Text Reference: <a href="http://www.regular-expressions.info/refreplace.html" target="_blank"><nobr><font size="-1">http://www.regular-expressions.info/refreplace.html</font></nobr></a>
+<br>
+<br>HEAVY DOCUMENTATION
+<br>  Syntax of regular expressions in Perl: <a href="http://search.cpan.org/dist/perl/pod/perlre.pod" target="_blank"><nobr><font size="-1">http://search.cpan.org/dist/perl/pod/perlre.pod</font></nobr></a>
+<br>  Syntax of regular expressions in Perl: <a href="http://perldoc.perl.org/perlre.html" target="_blank"><nobr><font size="-1">http://perldoc.perl.org/perlre.html</font></nobr></a>
+<br>  Concatenation of the PCRE man pages:   <a href="http://www.pcre.org/pcre.txt" target="_blank"><nobr><font size="-1">http://www.pcre.org/pcre.txt</font></nobr></a>
+<br>  Perl Compatible Regular Expressions:   <a href="http://en.wikipedia.org/wiki/PCRE" target="_blank"><nobr><font size="-1">http://en.wikipedia.org/wiki/PCRE</font></nobr></a>
+<br>
+<br>PROGRAMS
+<br>  RegExBuddy: <a href="http://www.regexbuddy.com/" target="_blank"><nobr><font size="-1">http://www.regexbuddy.com</font></nobr></a> ($40) Screenshot: <a href="http://www.regexbuddy.com/screen.html" target="_blank"><nobr><font size="-1">http://www.regexbuddy.com/screen.html</font></nobr></a>
+<br>
+<br>LIBRARIES
+<br>  Regular Expression Library: <a href="http://regexlib.com/" target="_blank"><nobr><font size="-1">http://regexlib.com/</font></nobr></a>
+<br>    Categories:
+<ul>
+<li>Email
+</li><li>Uri
+</li><li>Numbers
+</li><li>Strings
+</li><li>Dates and Times
+</li><li>Misc
+</li><li>Address/Phone
+</li><li>Markup/Code
+</li></ul>
+
+<a href="http://www.regular-expressions.info/examples.html" target="_blank"><nobr><font size="-1">http://www.regular-expressions.info/examples.html</font></nobr></a>
+<ul>
+<li>Grabbing HTML Tags
+</li><li>Trimming Whitespace
+</li><li>Matching an IP address
+</li><li>Matching a Floating Point Number
+</li><li>Matching an Email Address
+</li><li>Matching Valid Dates
+</li><li>Finding or Verifying Credit Card Numbers
+</li><li>Matching Complete Lines
+</li><li>Removing Duplicate Lines or Items
+</li><li>Regex Examples for Processing Source Code
+</li><li>Two Words Near Each Other
+</li></ul>
+
+A Collection/Library Of Regular Expressions: <a href="http://www.autohotkey.com/forum/viewtopic.php?t=13544" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/viewtopic.php?t=13544</font></nobr></a>
+<ul>
+<li>Ensure that a path doesn't end with a backslash
+</li><li>Ensure that a path ends with a backslash
+</li><li>Replace characters illegal in a file name by something else (can be empty)
+</li><li>Keep only lines starting with a given string
+</li><li>Parse a date
+</li><li>trim chars on left and/or right of strings
+</li><li>How to make parsing loops work from back to front?
+</li><li>How to replace variable references in a template text file by the value of the referenced variables?
+</li><li>How to replace i with I only if it has spaces before and after
+</li><li>remove duplicate lines
+</li></ul>
+<br>
+<a name="N2"><span class="lh">N2:</span></a> <span class="header">&nbsp;&nbsp;Regular Expression EXAMPLES</span>
+<br>
+<br>Examples from: <a href="http://www.regular-expressions.info/numericranges.html" target="_blank"><nobr><font size="-1">http://www.regular-expressions.info/numericranges.html</font></nobr></a>
+<br>    Matching Floating Point Numbers with a Regular Expression
+<br>    Here are a few more common ranges that you may want to match:
+<br>
+
+<pre>000..255:       <span class="b">——</span>  <span class="com">^([01][0-9][0-9]|2[0-4][0-9]|25[0-5])$</span>
+0 or 000..255:  <span class="b">——</span>  <span class="com">^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$</span>
+0 or 000..127:  <span class="b">——</span>  <span class="com">^(0?[0-9]?[0-9]|1[0-1][0-9]|12[0-7])$</span>
+0..999:         <span class="b">——</span>  <span class="com">^([0-9]|[1-9][0-9]|[1-9][0-9][0-9])$</span>
+000..999:       <span class="b">——</span>  <span class="com">^[0-9]{3}$</span>
+0 or 000..999:  <span class="b">——</span>  <span class="com">^[0-9]{1,3}$</span>
+1..999:         <span class="b">——</span>  <span class="com">^([1-9]|[1-9][0-9]|[1-9][0-9][0-9])$</span>
+001..999:       <span class="b">——</span>  <span class="com">^(00[1-9]|0[1-9][0-9]|[1-9][0-9][0-9])$</span>
+1 or 001..999:  <span class="b">——</span>  <span class="com">^(0{0,2}[1-9]|0?[1-9][0-9]|[1-9][0-9][0-9])$</span>
+0 or 00..59:    <span class="b">——</span>  <span class="com">^[0-5]?[0-9]$</span>
+0 or 000..366:  <span class="b">——</span>  <span class="com">^(0?[0-9]?[0-9]|[1-2][0-9][0-9]|3[0-6][0-9]|36[0-6])$</span>
+</pre>
+
+Examples from: <a href="http://www.codeproject.com/KB/dotnet/regextutorial.aspx" target="_blank"><nobr><font size="-1">http://www.codeproject.com/KB/dotnet/regextutorial.aspx</font></nobr></a>
+
+<pre><span class="bk">    1.</span> elvis                 <span class="com">Find elvis</span>
+<span class="bk">    2.</span> \belvis\b             <span class="com">Find elvis as a whole word</span>
+<span class="bk">    3.</span> \belvis\b.*\balive\b  <span class="com">Find text with "elvis" followed by "alive"</span>
+<span class="bk">    4.</span> \b\d\d\d-\d\d\d\d     <span class="com">Find seven-digit phone number</span>
+<span class="bk">    5.</span> \b\d{3}-\d{4}         <span class="com">Find seven-digit phone number a better way</span>
+<span class="bk">    6.</span> \ba\w*\b              <span class="com">Find words that start with the letter a</span>
+<span class="bk">    7.</span> \d+                   <span class="com">Find repeated strings of digits</span>
+<span class="bk">    8.</span> \b\w{6}\b             <span class="com">Find six letter words</span>
+<span class="bk">    9.</span> .^\d{3}-\d{4}$        <span class="com">Validate a seven-digit phone number</span>
+<span class="bk">   10.</span> \b\w{5,6}\b           <span class="com">Find all five and six letter words</span>
+<span class="bk">   11.</span> \b\d{3}\s\d{3}-\d{4}  <span class="com">Find ten digit phone numbers</span>
+<span class="bk">   12.</span> \d{3}-\d{2}-\d{4}     <span class="com">Social security number</span>
+<span class="bk">   13.</span> ^\w*                  <span class="com">The first word in the line or in the text</span>
+<span class="bk">   14.</span> \(?\d{3}[) ]\s?\d{3}[- ]\d{4}  <span class="com">A ten digit phone number</span>
+<span class="bk">   15.</span> \S+                   <span class="com">All strings that do not contain whitespace characters</span>
+<span class="bk">   16.</span> \b\d{5}-\d{4}\b|\b\d{5}\b           <span class="com">Five and nine digit Zip Codes</span>
+<span class="bk">   17.</span> (\(\d{3}\)|\d{3})\s?\d{3}[- ]\d{4}  <span class="com">Ten digit phone numbers, a better way.
+                                           This expression will find phone numbers in several formats, like
+                                           "(800) 325-3535" or "650 555 1212".
+                                           The "\(?" searches for zero or one left parentheses,
+                                           "[) ]" searches for a right parenthesis or a space. The
+                                           "\s?" searches for zero or one whitespace characters.
+                                           Unfortunately, it will also find cases like
+                                           "650) 555-1212" in which the parenthesis is not balanced.
+                                           Below, you'll see how to use alternatives to eliminate this problem.</span>
+<span class="bk">   18.</span> (\d{1,3}\.){3}\d{1,3}               <span class="com">A simple IP address finder</span>
+<span class="bk">   19.</span> ((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)  <span class="com">IP finder</span>
+<span class="bk">   20.</span> \b(\w+)\b\s*\1\b      <span class="com">Find repeated words</span>
+<span class="bk">   21.</span> \b(?&lt;Word&gt;\w+)\b\s*\k&lt;Word&gt;\b   <span class="com">Capture repeated word in a named group</span>
+<span class="bk">   22.</span> \b\w+(?=ing\b)        <span class="com">The beginning of words ending with "ing"</span>
+<span class="bk">   23.</span> (?&lt;=\bre)\w+\b        <span class="com">The end of words starting with "re"</span>
+<span class="bk">   24.</span> (?&lt;=\d)\d{3}\b        <span class="com">Three digits at the end of a word, preceded by a digit</span>
+<span class="bk">   25.</span> (?&lt;=\s)\w+(?=\s)      <span class="com">Alphanumeric strings bounded by whitespace</span>
+<span class="bk">   26.</span> \b\w*q[^u]\w*\b       <span class="com">Words with "q" followed by NOT "u"</span>
+<span class="bk">   27.</span> \b\w*q(?!u)\w*\b      <span class="com">Search for words with "q" not followed by "u"</span>
+<span class="bk">   28.</span> \d{3}(?!\d)           <span class="com">Three digits not followed by another digit</span>
+<span class="bk">   29.</span> (?&lt;![a-z ])\w{7}      <span class="com">Strings of 7 alphanumerics not preceded by a letter or space</span>
+<span class="bk">   30.</span> (?&lt;=&lt;(\w+)&gt;).*(?=&lt;\/\1&gt;)  <span class="com">Text between HTML tags</span>
+<span class="bk">   31.</span> Text between HTML tags (see referenced source page above)
+<span class="bk">   32.</span> a.*b                  <span class="com">The longest string starting with a and ending with b</span>
+<span class="bk">   33.</span> a.*?b                 <span class="com">The shortest string starting with a and ending with b</span>
+</pre>
+
+<b>Phone numbers:</b>
+<pre><span class="bk">    a.</span> \(\d\d\d\)\s\d\d\d-\d\d\d\d
+<span class="bk">    b.</span> \(\d{3}\)\s\d{3}-\d{4}
+<span class="bk">    4.</span> \b\d\d\d-\d\d\d\d     <span class="com">Find seven-digit phone number</span>
+<span class="bk">    5.</span> \b\d{3}-\d{4}         <span class="com">Find seven-digit phone number a better way</span>
+<span class="bk">    9.</span> .^\d{3}-\d{4}$        <span class="com">Validate a seven-digit phone number</span>
+<span class="bk">   11.</span> \b\d{3}\s\d{3}-\d{4}  <span class="com">Find ten digit phone numbers</span>
+<span class="bk">   14.</span> \(?\d{3}[) ]\s?\d{3}[- ]\d{4}  <span class="com">A ten digit phone number</span>
+<span class="bk">   17.</span> (\(\d{3}\)|\d{3})\s?\d{3}[- ]\d{4}  <span class="com">Ten digit phone numbers, a better way.</span>
+</pre>
+
+<b>Dates:</b>
+<pre><span class="bk">    a.</span> (\d\d)-(\d\d)-(\d\d\d\d)    <span class="com">MM-DD-YYYY</span>   <span class="comsm">(MM -&amp; $1, DD -&amp; $2, YYY -&amp; $3)</span>
+<span class="bk">    b.</span> (\d\d\d\d)-(\d\d)-(\d\d)    <span class="com">YYYY-MM-DD</span>   <span class="comsm">(YYYY -&amp; $1, MM -&amp; $2, DD -&amp; $3)</span>
+<span class="bk">    c.</span> ^\d{1,2}\/\d{1,2}\/\d{4}$   <span class="com">XX/XX/YYYY where XX can be 1 or 2 digits long and YYYY is always 4 digits long.</span>
+</pre>
+
+<br>
+<br>/******************************************************************************
+<br>
+<a name="N3"><span class="lh">N3:</span></a><span class="header">&nbsp;&nbsp;RegExReplace</span>
+<br>
+<a name="N3.1"><span class="lh2">N3.1:</span></a> <b>Basic examples</b>
+<br>
+
+<pre><span class="com">; Examples</span>
+f1 := RegExReplace("55555", "5", "five") <span class="com">;f1 = "fivefivefivefivefive"</span>
+MsgBox f1=%f1%
+
+f2 := RegExReplace("55555", "55", "x") <span class="com">;f2 = "xx5"</span>
+MsgBox f2=%f2%
+</pre>
+
+<br>
+<a name="N3.2"><span class="lh2">N3.2:</span></a> <b>EXTRACT Month, Day, Year, from 1/22/2009</b>
+
+<pre><span class="com">;Regular Expression to EXTRACT Month, Day, Year, from 1/22/2009</span>
+<span class="com">;month &amp; day can be 1 or 2 digits</span>
+ c := "xxxxxxxx 1/22/2009 yyyyyyyyyyyy"
+ month := RegExReplace(c,".*?(\d{1,2})\/(\d{1,2})\/(\d{4})(.*)","$1")
+ day   := RegExReplace(c,".*?(\d{1,2})\/(\d{1,2})\/(\d{4})(.*)","$2")
+ year  := RegExReplace(c,".*?(\d{1,2})\/(\d{1,2})\/(\d{4})(.*)","$3")
+ MsgBox month=%month%`nday=%day%`nyear=%year%
+</pre>
+
+<br>
+<a name="N3.3"><span class="lh2">N3.3:</span></a> <b>An example of how we can step by step build up our Regular Expression</b>
+<pre><span class="com">;An example of how we can step by step build up our Regular Expression</span>
+<span class="com">;Given string c, extract the data...</span>
+c := "  02-17-2009     238  Payment by Check.     314.15   9,265.35  "
+
+<span class="com">;Trim leading and trailing spaces</span>
+c = %c%
+
+<span class="com">; <b>1.</b>
+; c := "</span><span class="b1">02-17-2009     238  Payment by Check.     314.15   9,265.35</span><span class="com">"
+; Start with "</span><span class="b1">(.*)</span><span class="com">" which grabs the whole string</span>
+f3 := RegExReplace(c, "<span class="b2">(.*)</span>", "$1")
+MsgBox f3=%f3%
+<span class="com">; f3 = "</span><span class="b1">02-17-2009     238  Payment by Check.     314.15   9,265.35</span><span class="com">"</span>
+
+<span class="com">; <b>2.</b>
+; c := "</span><span class="b1">02</span><span class="com">-17-2009     238  Payment by Check.     314.15   9,265.35"
+; Add "</span><span class="b1">(\d\d)</span><span class="com">" to parse off the first two digits (the month)</span>
+f4 := RegExReplace(c, "<span class="b2">(\d\d)</span>(.*)", "{$1} {$2}")
+MsgBox f4=%f4%
+<span class="com">; f4 = "{</span><span class="b3">02</span><span class="com">} {-17-2009     238  Payment by Check.     314.15   9,265.35}"</span>
+
+<span class="com">; <b>3.</b>
+; c := "02</span><span class="b1">-</span><span class="com">17-2009     238  Payment by Check.     314.15   9,265.35"
+; Add "</span><span class="b1">-</span><span class="com">" to parse off the dash</span>
+f5 := RegExReplace(c, "(\d\d)<span class="b2">-</span>(.*)", "{$1} {$2}")
+MsgBox f5=%f5%
+<span class="com">; f5 = "{02}</span><span class="b3"> </span><span class="com">{17-2009     238  Payment by Check.     314.15   9,265.35}"</span>
+
+<span class="com">; <b>4.</b>
+; c := "02-</span><span class="b1">17</span><span class="com">-2009     238  Payment by Check.     314.15   9,265.35"
+; Add "</span><span class="b1">(\d\d)</span><span class="com">" to parse off the second two digits (the day) and save it as $2</span>
+f6 := RegExReplace(c, "(\d\d)-<span class="b2">(\d\d)</span>(.*)", "{$1} {$2} {$3}")
+MsgBox f6=%f6%
+<span class="com">; f6 = "{02} {</span><span class="b3">17</span><span class="com">} {-2009     238  Payment by Check.     314.15   9,265.35}"</span>
+
+<span class="com">; <b>5.</b>
+; c := "02-17</span><span class="b1">-</span><span class="com">2009     238  Payment by Check.     314.15   9,265.35"
+; Add "</span><span class="b1">-</span><span class="com">" to parse off the dash</span>
+f6 := RegExReplace(c, "(\d\d)-<span class="b2">(\d\d)</span>(.*)", "{$1} {$2} {$3}")
+MsgBox f6=%f6%
+<span class="com">; f6 = "{02} {17}</span><span class="b3"> </span><span class="com">{-2009     238  Payment by Check.     314.15   9,265.35}"</span>
+
+<span class="com">; <b>6.</b>
+; c := "02-17-</span><span class="b1">2009</span><span class="com">     238  Payment by Check.     314.15   9,265.35"
+; Add "</span><span class="b1">(\d\d\d\d)</span><span class="com">" to parse off the year (4 digits) and save it as $3</span>
+f7 := RegExReplace(c, "(\d\d)-(\d\d)-<span class="b2">(\d\d\d\d)</span>(.*)", "{$1} {$2} {$3} {$4}")
+MsgBox f7=%f7%
+<span class="com">; f7 = "{02} {17} {</span><span class="b3">2009</span><span class="com">} {     238  Payment by Check.     314.15   9,265.35}"</span>
+
+<span class="com">; <b>7.</b>
+; c := "02-17-2009</span><span class="b1">     </span><span class="com">238  Payment by Check.     314.15   9,265.35"
+; Add "</span><span class="b1"> +</span><span class="com">" to parse off one or more spaces</span>
+f8 := RegExReplace(c, "(\d\d)-(\d\d)-(\d\d\d\d)<span class="b2"> +</span>(.*)", "{$1} {$2} {$3} {$4}")
+MsgBox f8=%f8%
+<span class="com">; f8 = "{02} {17} {2009}</span><span class="b3"> </span><span class="com">{238  Payment by Check.     314.15   9,265.35}"</span>
+
+<span class="com">; <b>8.</b>
+; c := "02-17-2009     </span><span class="b1">238</span><span class="com">  Payment by Check.     314.15   9,265.35"
+; Add "</span><span class="b1">(\d+)</span><span class="com">" to parse off the check number (one or more digits) and save it as $4</span>
+f9 := RegExReplace(c, "(\d\d)-(\d\d)-(\d\d\d\d) +<span class="b2">(\d+)</span>(.*)", "{$1} {$2} {$3} {$4} {$5}")
+MsgBox f9=%f9%
+<span class="com">; f9 = "{02} {17} {2009} {</span><span class="b3">238</span><span class="com">} {  Payment by Check.     314.15   9,265.35}"</span>
+
+<span class="com">; <b>9.</b>
+; c := "02-17-2009     238</span><span class="b1">  </span><span class="com">Payment by Check.     314.15   9,265.35"
+; Add "</span><span class="b1"> +</span><span class="com">" to parse off one or more spaces</span>
+f10 := RegExReplace(c, "(\d\d)-(\d\d)-(\d\d\d\d) +(\d+)<span class="b2"> +</span>(.*)", "{$1} {$2} {$3} {$4} {$5}")
+MsgBox f10=%f10%
+<span class="com">;f10 = "{02} {17} {2009} {238}</span><span class="b3"> </span><span class="com">{Payment by Check.     314.15   9,265.35}"</span>
+
+<span class="com">; <b>10.</b>
+; c := "02-17-2009     238  </span><span class="b1">Payment by Check.</span><span class="b4">     </span><span class="com">314.15   9,265.35"
+; Add "</span><span class="b1">(.*?)</span><span class="com">" to parse off the text (minimal match), followed by "</span><span class="b4"> {5}</span><span class="com">" to parse off 5 spaces</span>
+; (there apparently is always 5 spaces. This tells us when we're done parsing off the text.)
+f11 := RegExReplace(c, "(\d\d)-(\d\d)-(\d\d\d\d) +(\d+) +<span class="b2">(.*?)</span><span class="b4"> {5}</span>(.*)", "{$1} {$2} {$3} {$4} {$5} {$6}")
+MsgBox f11=%f11%
+<span class="com">; f11 = "{02} {17} {2009} {238} {</span><span class="b3">Payment by Check.</span>}<span class="b4"> </span><span class="com">{314.15   9,265.35}"</span>
+
+<span class="com">; <b>11.</b>
+; c := "02-17-2009     238  Payment by Check.     </span><span class="b1">314.15</span><span class="com">   9,265.35"
+; Add "</span><span class="b1">([\d,.]+)</span><span class="com">" to parse off the dollars and cents (one or more digits with possible commas and decimal point, e.g. 27,182.81)</span>
+f12 := RegExReplace(c, "(\d\d)-(\d\d)-(\d\d\d\d) +(\d+) +(.*?) {5}<span class="b2">([\d,.]+)</span>(.*)", "{$1} {$2} {$3} {$4} {$5} {$6} {$7}")
+MsgBox f12=%f12%
+<span class="com">; f12 = "{02} {17} {2009} {238} {Payment by Check.} {</span><span class="b3">314.15</span><span class="com">} {   9,265.35}"</span>
+
+<span class="com">; <b>12.</b>
+; c := "02-17-2009     238  Payment by Check.     314.15</span><span class="b1">   </span><span class="com">9,265.35"
+; Add "</span><span class="b1"> {3}</span><span class="com">" to parse off 3 spaces (apparently always 3)</span>
+f13 := RegExReplace(c, "(\d\d)-(\d\d)-(\d\d\d\d) +(\d+) +(.*?) {5}([\d,.]+)<span class="b2"> {3}</span>(.*)", "{$1} {$2} {$3} {$4} {$5} {$6} {$7}")
+MsgBox f13=%f13%  <span class="com">;f13 = "{02} {17} {2009} {238} {Payment by Check.} {314.15}</span><span class="b3"> </span><span class="com">{9,265.35}"</span>
+
+<span class="com">; <b>13.</b>
+; c := "02-17-2009     238  Payment by Check.     314.15   </span><span class="b1">9,265.35</span><span class="com">"
+; Add "</span><span class="b1">([\d,.]+</span><span class="com">" to parse off the dollars and cents (one or more digits with possible commas and decimal point, e.g. 27,182.81)</span>
+f14 := RegExReplace(c, "(\d\d)-(\d\d)-(\d\d\d\d) +(\d+) +(.*?) {5}([\d,.]+) {3}<span class="b2">([\d,.]+)</span>(.*)", "{$1} {$2} {$3} {$4} {$5} {$6} {$7} {$8}")
+MsgBox f14=%f14%
+<span class="com">; f14 = "{02} {17} {2009} {238} {Payment by Check.} {314.15} {</span><span class="b3">9,265.35</span><span class="com">} {}"
+;        (the last empty {} indicates there's nothing left over)</span>
+</pre>
+
+<br>
+<a name="N3.4"><span class="lh2">N3.4:</span></a> <b>Find the $ dollar sign. Extract price and add a $.</b>
+
+<pre><span class="com">;find the $ dollar sign</span>
+c := "xxx $17.25 yyy"
+dollar := RegExReplace(c,"(.*?)(\$)(.*)","$2")
+MsgBox dollar=%dollar%
+
+<span class="com">;extract price and add a dollar sign</span>
+c := "xxx 17.25 yyy"
+price := RegExReplace(c,"(.*?)([\d,.]+)(.*)","$$$2")
+msgbox price=%price%   <span class="com">; price = "$17.25"
+
+; For RegExReplace <b>replace</b> string only:
+;    To specify a literal $, use $$
+;    $ is the only character that needs such special treatment in a RegEx replace string.
+;    Backslashes are never needed to escape anything else in a RegEx replace string.
+; (RegEx search string still needs to have many characters escaped.)</span>
+</pre>
+
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+<a name="O"><span class="lh">O:</span></a><span class="header">&nbsp;&nbsp;Misc AutoHotkey Notes &amp; Debugging Tips</span>
+<br>
+<br><a name="O1"><span class="lh">O1: Notes / Caveats</span></a>
+<br>
+<br>
+  <table border="0" width="1">
+  <tbody><tr>
+    <td><ul><li><nobr><span class="cn">NOTE:&nbsp;</span></nobr></li></ul></td>
+    <td>ALL VARIABLES ARE STORED AS CHARACTER STRINGS !!!
+     <br>Strings containing numbers are converted to numbers when needed, and the result is converted back to a string.
+    </td>
+  </tr>
+  <tr><td colspan="2" style="visibility:hidden;"><nobr>/******************************************************************************</nobr></td></tr>
+    <tr><td><ul><li><nobr><span class="cn">NOTE:&nbsp;</span></nobr></li></ul></td>
+    <td>Closing */ must be first thing on line. Otherwise you'll be asking yourself,
+        "Why does my script stop running at this point, as if the whole rest of
+        the script was commented out?"
+        <br>
+        <br>
+        <img src="./AutoHotkey Expression Examples_ __ %% () and all that_files/sad3.gif" width="18" height="18">
+<!-- Can't indent this because of <PRE> -->
+<pre>MsgBox Hello
+<span class="com">/* here is a comment
+and another comment */
+MsgBox Goodbye    ;You'll never see this message</span>
+</pre>
+<img src="./AutoHotkey Expression Examples_ __ %% () and all that_files/happy3.gif" width="18" height="18">
+<pre>MsgBox Hello
+<span class="com">/* here is a comment
+and another comment
+*/</span>
+MsgBox Goodbye    <span class="com">;Now you're OK</span>
+</pre>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="visibility:hidden;"><nobr>/******************************************************************************</nobr></td></tr>
+    <tr><td><ul><li><nobr><span class="cn">NOTE:&nbsp;</span></nobr></li></ul></td>
+    <td>
+        <img src="./AutoHotkey Expression Examples_ __ %% () and all that_files/sad3.gif" width="18" height="18">
+<!-- Can't indent this because of <PRE> -->
+<pre><span class="com">      Space here ruins function call
+      &#8595;</span>
+MyFunc (Param1)
+</pre>
+<img src="./AutoHotkey Expression Examples_ __ %% () and all that_files/happy3.gif" width="18" height="18">
+<pre>MyFunc(Param1)
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<ul>
+<li>When sending text, if there are problems, sometimes it helps to
+throw in a short delay (<span class="cn">Sleep 100</span>), or to slow down the sending of characters
+by using <span class="cn">SetKeyDelay</span> (e.g. <span class="cn">SetKeyDelay 90</span>)
+<br><br>
+</li><li><b>MsgBox</b>: You may need to manually restore focus to your current window
+    after a call to MsgBox. I was debugging an AutoHotkey script by throwing
+    in a bunch of MsgBox messages, and I discovered a problem that focus
+    wasn't being returned to my window after the MsgBox timed out. So, I
+    added a WinActivate after MsgBox to restore focus to my window, and all
+    was well again.
+    <br><span class="xxsmall">(May have been caused by cross contamination from
+    another unrelated program. I'm so tired of debugging Windows programs
+    only to discover there's nothing wrong with the program I'm debugging, it's the Windows
+    OS itself that's been corrupted by a completely unrelated program.
+    I thought those days were long behind us.</span>)
+    <br><b>Update:</b> I had another case where this fix was exactly the <i>wrong</i> thing to do.
+   The "current window" wasn't the one I wanted. Removing the WinExist/WinActivate
+   combo fixed the problem. (Alas, no solution is universal.)
+
+</li></ul>
+<br><a name="O2"><span class="lh">O2: Sending Debug Data To A Log File</span></a>
+<pre><span class="com">;Example 1. Log a message</span>
+SetWorkingDir, %A_ScriptDir%  <span class="com">;Set default directory to where this script file is located</span>
+LogFile := "MyLog.txt"
+FileAppend, This is a message`n, %LogFile%  <span class="com">;(note the trailing (`n) to start a new line. This could instead be a leading (`n) if you want.</span>
+</pre>
+
+<pre><span class="com">;Example 2. Include a time stamp</span>
+SetWorkingDir, %A_ScriptDir%  <span class="com">;Set default directory to where this script file is located</span>
+LogFile := "MyLog.txt"
+FormatTime, TimeString, , yyyy-MM-dd hh:mm:ss tt
+FileAppend, `n%TimeString% : This is a message`n, %LogFile%
+</pre>
+
+<pre><span class="com">;Example 3. Put it all in a function named LogMsg</span>
+SetWorkingDir, %A_ScriptDir%  <span class="com">;Set default directory to where this script file is located</span>
+LogFile := "MyLog.txt"
+LogMsg("This is a message")   <span class="com">;Note LogMsg adds a leading (`n) so each message starts on a new line</span>
+LogMsg("Variable X = " . X )  <span class="com">;Concatenate using the dot .</span>
+ExitApp
+
+<span class="com">;---------------------------
+;And here is our function:</span>
+LogMsg( msg )
+{
+  global LogFile
+  FormatTime, TimeString, , yyyy-MM-dd hh:mm:ss tt
+  FileAppend, `n%TimeString% : %msg%, %LogFile%
+}
+</pre>
+<b>Update:</b> I've had cases where using <font color="darkblue">FileAppend</font>
+too frequently causes it to occasionally fail. An expected line in the log file just isn't there.
+You can check <font color="darkblue">ErrorLevel</font>, but there's no way to
+get further info on <i>why</i> it failed. <span class="tn">Tech note: This
+may be because FileAppend closes the file every time. That can be a lot of
+opening/closing a file.</span>
+
+<br>
+<br>
+<br><a name="O3"><span class="lh">O3: Capturing a screen image during run using IrfanView</span></a>
+<pre><span class="com">/******************************************************************************
+Capturing a screen image during run using IrfanView (www.irfanview.com)
+*/</span>
+RunWait "C:\Program Files\IrfanView\i_view32.exe" "/capture=1  /convert=C:\TEMP\MyImage.bmp"
+</pre>
+
+<br>
+<br>/******************************************************************************
+<br>
+<a name="P"><span class="lh">P:</span></a><span class="header">&nbsp;&nbsp;Misc AutoHotkey Scripts:</span>
+<br>
+<br>
+<a name="P1"><span class="lh">P1: Misc AutoHotkey Scripts</span></a>
+<ul>
+  <li>Laptop Low Battery Alert (BatteryDeley): <a href="http://www.autohotkey.com/forum/viewtopic.php?t=40683" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/viewtopic.php?t=40683</font></nobr></a>
+  </li><li><font size="-1">Laptop Battery Indicator (PowerCircle): <a href="http://powercircle.aldwin.us/" target="_blank"><nobr><font size="-1">http://powercircle.aldwin.us/</font></nobr></a></font>
+  </li><li><font size="-1">Laptop Battery Indicator (PowerMeter+): <a href="http://mattcollinge.wordpress.com/software/power-meter-plus/" target="_blank"><nobr><font size="-1">http://mattcollinge.wordpress.com/software/power-meter-plus/</font></nobr></a></font>
+  </li><li>System Uptime: <a href="http://www.autohotkey.com/forum/topic18534.html" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/topic18534.html</font></nobr></a>
+  </li><li>DimScreen: <a href="http://www.donationcoder.com/Software/Skrommel/#DimScreen" target="_blank"><nobr><font size="-1">http://www.donationcoder.com/Software/Skrommel/#DimScreen</font></nobr></a>
+  </li><li>Extract Informations about TaskButtons <a href="http://www.autohotkey.com/forum/viewtopic.php?t=18652" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/viewtopic.php?t=18652</font></nobr></a>
+  </li><li>Extra mouse button does left click &amp; hold (one line script)
+<pre>XButton2::click down
+</pre>
+
+</li></ul>
+<br>
+<a name="P2"><span class="lh">P2: Index of notable scripts found in the AutoHotkey Forum</span></a> : <a href="http://www.autohotkey.com/wiki/index.php?title=Script_Listing" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/wiki/index.php?title=Script_Listing</font></nobr></a>
+
+<table>
+  <tbody><tr><td>
+<ul>
+  <li>1 AutoHotkey Related
+    <ul>
+      <li>1.1 Ports/custom builds
+        <ul>
+          <li>1.1.1 Windows NT+</li>
+          <li>1.1.2 Windows CE</li>
+          <li>1.1.3 Windows/Linux/Mac (.NET/Mono)</li>
+        </ul>
+      </li>
+      <li>1.2 Compile AutoHotkey yourself
+        <ul>
+          <li>1.2.1 MS Visual C++</li>
+          <li>1.2.2 GCC</li>
+        </ul>
+      </li>
+      <li>1.3 Use AutoHotkey with other programming/scripting languages
+        <ul>
+          <li>1.3.1 Any</li>
+        </ul>
+      </li>
+      <li>1.4 Use other programming/scripting languages inline in AutoHotkey
+        <ul>
+          <li>1.4.1 Perl</li>
+          <li>1.4.2 C#/VB</li>
+          <li>1.4.3 VBScript/JScript, VB/VBA/MS Office</li>
+          <li>1.4.4 Assembly/Machine code</li>
+          <li>1.4.5 C/C++</li>
+          <li>1.4.6 Lisp/ECL</li>
+        </ul>
+      </li>
+      <li>1.5 Scripts</li>
+      <li>1.6 Tools</li>
+      <li>1.7 Editors</li>
+    </ul>
+  </li>
+  <li>2 GUI
+    <ul>
+      <li>2.1 General</li>
+      <li>2.2 All</li>
+      <li>2.3 3P Controls</li>
+      <li>2.4 MsgBox</li>
+      <li>2.5 ListBox</li>
+      <li>2.6 Splash</li>
+      <li>2.7 Menu</li>
+      <li>2.8 Templates</li>
+      <li>2.9 Hotkey</li>
+      <li>2.10 Button</li>
+      <li>2.11 Hyperlink</li>
+      <li>2.12 ListView</li>
+      <li>2.13 Edit</li>
+      <li>2.14 Other</li>
+      <li>2.15 Tooltip</li>
+      <li>2.16 TreeView</li>
+    </ul>
+  </li>
+  <li>3 Functions</li>
+  <li>4 Audio and Video</li>
+  <li>5 File Management and Searching</li>
+  <li>6 File Reading &amp; Parsing</li>
+  <li>7 Internet related</li>
+  <li>8 XML, HTML and BBCode</li>
+  <li>9 Window Manipulation</li>
+  <li>10 Keyboard Enhancements</li>
+  <li>11 Mouse Related</li>
+  <li>12 Clipboard Manipulation</li>
+  <li>13 Games
+    <ul>
+      <li>13.1 Game Related</li>
+    </ul>
+  </li>
+  <li>14 Fun</li>
+  <li>15 Images</li>
+  <li>16 Time and Scheduling</li>
+  <li>17 Encryption / Encoding / Binary</li>
+  <li>18 System Related</li>
+  <li>19 Security</li>
+  <li>20 Miscellaneous</li>
+</ul>
+    </td>
+  </tr>
+</tbody></table>
+<br>
+<br>
+
+<a name="P3"><span class="lh">P3: AHK Functions - ƒ()</span></a>
+<br>
+<a href="http://www.autohotkey.com/forum/viewtopic.php?t=8728" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?t=8728</nobr></a>
+
+<ul>
+<li><b>AUTOHOTKEY:</b>
+  <ul>
+    <li><span class="ctb">VarExist(Var)</span> - <a href="http://www.autohotkey.com/forum/viewtopic.php?p=83371#83371" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=83371#83371</nobr></a>
+    </li><li><b>ƒ()</b> - Pass an array of integers to a function.  <a href="http://www.autohotkey.com/forum/viewtopic.php?p=242750#242750" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=242750#242750</nobr></a>
+  </li></ul>
+
+</li><li><b>STRINGS:</b>
+  <ul>
+    <li><span class="ctb">SetWidth(Str,Width,AlignText)</span> - increase a string's length by adding spaces to it and aligns it Left/Center/Right.
+    </li><li><span class="ctb">NumFormat( Number, Width, Dec, PadChar )</span> - format a float. Pad leading characters (any character) to a numeric string.
+    </li><li><span class="ctb">Replicate(chr,x)</span>
+    <br><span class="ct">Replicate(chr(196)</span>,80) - creates a horizontal ruling 80 characters wide
+    </li><li><span class="ctb">Space(Width)</span>
+    <br><span class="ct">Space(80)</span> - 80 spaces
+    </li><li><span class="ctb">UPPER(String)</span>
+    </li><li><span class="ctb">LOWER(String)</span>
+    </li><li><span class="ctb">PROPER(String)</span>
+  </li></ul>
+  <a href="http://www.autohotkey.com/forum/viewtopic.php?p=53028#53028" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=53028#53028</nobr></a>
+  <ul>
+    <li><span class="ctb">RandStr()</span> - Generates and returns a Random string. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=217712#217712" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=217712#217712</nobr></a>
+    </li><li><span class="ctb">HashStr()</span> - Hashes a String and returns value as hex.
+    </li><li><span class="ctb">Hash()</span> - Hashes a Byte-array and returns value as hex.
+    </li><li><a href="http://www.autohotkey.com/forum/viewtopic.php?p=231784#231784" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=231784#231784</nobr></a>
+  </li></ul>
+
+   <ul>
+     <li><b>Last Day Of Month</b> (e.g. 30, 31, 28, 29) <span class="ctb">LDOM()</span> - <a href="http://www.autohotkey.com/forum/viewtopic.php?p=54502#54502" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=54502#54502</nobr></a>
+     <br> - YearMonthDay format - <a href="http://www.autohotkey.com/forum/viewtopic.php?p=54532#54532" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=54532#54532</nobr></a>
+   </li></ul>
+
+</li><li><b>COLOR:</b>
+
+    <ul>
+      <li><span class="ctb">HEX2RGB(HEXString,Delimiter="")</span>
+      </li><li><span class="ctb">RGB2HEX(RGBString,Delimiter="")</span>
+      </li><li><span class="ctb">CheckHexC(HEXString)</span> - validates a "Hex Color Code" by calling the above two functions.
+      <br>Examples:
+      <br>  <span class="ct">HEX2RGB("FFFFFF")</span>      -&gt; "255,255,255"
+      <br>  <span class="ct">RGB2HEX("255,255,255")</span> -&gt; "FFFFFF"
+      <br>  <span class="ct">CheckHexC("FFFFFF")</span>    -&gt; 1
+      <br>  <span class="ct">CheckHexC("GOYYAH")</span>    -&gt; 0
+    </li></ul>
+      <a href="http://www.autohotkey.com/forum/viewtopic.php?p=58125#58125" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=58125#58125</nobr></a>
+    <br><br>
+    <ul>
+      <li><span class="ctb">ChooseColor</span>() - wrapper function for windows ChooseColor Dialog. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=103432#103432" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=103432#103432</nobr></a>
+      </li><li><span class="ctb">ColorAdjL</span>() - Adjust Luminance for a given RGB color. In other words, this function can derive a lighter / darker shade for a given RGB color. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=238242#238242" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=238242#238242</nobr></a>
+      </li><li><span class="ctb">GetSysColor</span>() - calls windows GetSysColor function <a href="http://www.autohotkey.com/forum/viewtopic.php?p=66521#66521" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=66521#66521</nobr></a>
+      </li><li>windows <b>GetSysColor</b> function: <a href="http://msdn.microsoft.com/en-us/library/ms724371.aspx" target="_blank"><nobr>http://msdn.microsoft.com/en-us/library/ms724371.aspx</nobr></a>
+    </li></ul>
+
+</li><li><b>FILES:</b>
+    <ul>
+      <li><span class="ctb">GetShortPathName(LongPath)</span>
+      <br>  using %A_LoopFileShortPath% - <a href="http://www.autohotkey.com/forum/viewtopic.php?p=69345#69345" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=69345#69345</nobr></a>
+      <br>  using DllCall - <a href="http://www.autohotkey.com/forum/viewtopic.php?p=69366#69366" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=69366#69366</nobr></a>
+      </li><li><span class="ctb">GetFileFolderSize(fPath)</span> - <a href="http://www.autohotkey.com/forum/viewtopic.php?p=82689#82689" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=82689#82689</nobr></a>
+      </li><li><span class="ctb">DriveSpace</span>() - Returns the FreeSpace / Capacity of a Drive in bytes. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=92483#92483" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=92483#92483</nobr></a>
+      </li><li><span class="ctb">ShellFileOperation</span>() - Basic Wrapper. A shell function that can be called to Copy / Move / Delete / Rename File(s). <a href="http://www.autohotkey.com/forum/viewtopic.php?p=133249#133249" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=133249#133249</nobr></a>
+      </li><li><span class="ctb">GetBinaryType</span>() - Determines whether a file is executable, and if so, what type of executable file it is. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=66383#66383" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=66383#66383</nobr></a>
+      </li><li><span class="ctb">FileGetVersionInfo</span>() - Extracts and returns version information from an executable file. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=233188#233188" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=233188#233188</nobr></a>
+    </li></ul>
+
+</li><li><b>SOUND:</b>
+    <ul>
+      <li><span class="ctb">SoundCard</span>() - Returns the number of soundcards available on a system. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=88891#88891" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=88891#88891</nobr></a>
+      </li><li><span class="ctb">SoundExC</span>() - SoundEx Classic Version. Phonetic algorithm for indexing names by sound (English). <a href="http://www.autohotkey.com/forum/viewtopic.php?p=240065#240065" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=240065#240065</nobr></a>
+    </li></ul>
+
+</li><li><b>IMAGES:</b>
+    <ul>
+      <li><span class="ctb">ConvertGraphicsFile</span>() - Converts image file format between GIF/BMP/JPG/PNG. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=190227#190227" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=190227#190227</nobr></a>
+    </li></ul>
+
+</li><li><b>VIDEO:</b>
+    <ul>
+      <li><span class="ctb">AviFileInfo</span>() - Returns the video properties of an AVI file <a href="http://www.autohotkey.com/forum/viewtopic.php?p=91036#91036" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=91036#91036</nobr></a>
+    </li></ul>
+
+</li><li><b>SYSTEM:</b>
+    <ul>
+      <li><span class="ctb">GetPriority(ProcessName)</span> - <a href="http://www.autohotkey.com/forum/viewtopic.php?p=80548#80548" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=80548#80548</nobr></a>
+      </li><li><span class="ctb">ProcessOwner</span>() - Returns the Owner for a given Process ID. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=232445#232445" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=232445#232445</nobr></a>
+      </li><li><span class="ctb">ProcessCreationTime( ProcessID )</span> - <a href="http://www.autohotkey.com/forum/viewtopic.php?p=97186#97186" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=97186#97186</nobr></a>
+      </li><li><span class="ctb">Affinity_Set</span>() - Sets the CPU to be used in Dual/Quad/Multi core processors / Effectively, this function allows you to choose which AHK script uses what processor. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=202460#202460" target="_blank"><nobr>http://www.autohotkey.com/forum/viewtopic.php?p=202460#202460</nobr></a>
+    </li></ul>
+</li></ul>
+
+
+<br>
+<br>
+<a name="P4"><span class="lh">P4: Library for Text File Manipulation</span></a> : <a href="http://www.autohotkey.net/~heresy/Functions/TXT.ahk" target="_blank"><nobr><font size="-1">http://www.autohotkey.net/~heresy/Functions/TXT.ahk</font></nobr></a>
+<br>
+<ul>
+  <li><b>Basic Functions</b>
+      <ul>
+        <li><span class="pre">TXT_TotalLines</span>
+        </li><li><span class="pre">TXT_ReadLines</span>
+        </li><li><span class="pre">TXT_Tail</span>
+      </li></ul>
+  </li><li><b>Alignment Functions</b>
+      <ul>
+        <li><span class="pre">TXT_AlignLeft</span>
+        </li><li><span class="pre">TXT_AlignCenter</span>
+        </li><li><span class="pre">TXT_AlignRight</span>
+        </li><li><span class="pre">TXT_ReverseLines</span>
+      </li></ul>
+  </li><li><b>Removement Functions</b>
+      <ul>
+        <li><span class="pre">TXT_RemoveLines</span>
+        </li><li><span class="pre">TXT_RemoveBlankLines</span>
+        </li><li><span class="pre">TXT_RemoveDuplicateLines</span>
+      </li></ul>
+  </li><li><b>Replacement Functions</b>
+      <ul>
+        <li><span class="pre">TXT_Replace</span>
+        </li><li><span class="pre">TXT_RegExReplace</span>
+        </li><li><span class="pre">TXT_ReplaceLine</span>
+      </li></ul>
+  </li><li><b>Insertion Functions</b>
+      <ul>
+        <li><span class="pre">TXT_LineNumber</span>
+        </li><li><span class="pre">TXT_InsertLine</span>
+        </li><li><span class="pre">TXT_InsertPrefix</span>
+        </li><li><span class="pre">TXT_InsertSuffix</span>
+      </li></ul>
+  </li><li><b>Column Functions</b>
+      <ul>
+        <li><span class="pre">TXT_ColGet</span>
+        </li><li><span class="pre">TXT_ColPut</span>
+        </li><li><span class="pre">TXT_ColCut</span>
+      </li></ul>
+  </li><li><b>Trimming Functions</b>
+      <ul>
+        <li><span class="pre">TXT_TrimLeft</span>
+        </li><li><span class="pre">TXT_TrimRight</span>
+      </li></ul>
+  </li><li><b>CSV Functions</b>
+      <ul>
+        <li><span class="pre">TXT_GetCSV</span>
+        </li><li><span class="pre">TXT_SetCSV</span>
+      </li></ul>
+  </li><li><b>File Join/Split Functions</b>
+      <ul>
+        <li><span class="pre">TXT_ConCat</span>
+      </li></ul>
+</li></ul>
+<br>
+<br>
+
+<a name="P5"><span class="lh">P5: Tray Icons</span></a> : <a href="http://www.autohotkey.com/wiki/index.php?title=Script_Listing" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/wiki/index.php?title=Script_Listing</font></nobr></a>
+<br>
+<ul>
+  <li>Master TrayIcon to control all running instances of AutoHotkey <a href="http://www.autohotkey.com/forum/viewtopic.php?p=142958#142958" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/viewtopic.php?p=142958#142958</font></nobr></a>
+  </li><li>Extract Informations about TrayIcons <a href="http://www.autohotkey.com/forum/viewtopic.php?t=17314" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/viewtopic.php?t=17314</font></nobr></a>
+</li></ul>
+<br>
+<br>
+<a name="P6"><span class="lh">P6: Force Exit another AutoHotkey script</span></a>
+<br>
+<b>To force Exit another AutoHotkey script (and have it's icon removed from the system tray):</b>
+<pre>WM_COMMAND = 0x111
+ID_FILE_EXIT = 65405
+PostMessage, WM_COMMAND, ID_FILE_EXIT, 0, , &lt;window-title&gt;
+</pre>
+<font size="-1">Example: To end the DimScreen program (an AutoHotkey script at <a href="http://www.donationcoder.com/Software/Skrommel/#DimScreen" target="_blank"><nobr><font size="-1">http://www.donationcoder.com/Software/Skrommel/#DimScreen</font></nobr></a>)
+</font>
+<pre>WM_COMMAND = 0x111
+ID_FILE_EXIT = 65405
+PostMessage, WM_COMMAND, ID_FILE_EXIT, 0, , DimScreen Screen
+</pre>
+<font size="-1">Notes: The above only works for AutoHotkey scrips (*.ahk, or compiled to *.exe)
+<br><span style="visibility:hidden;">Notes:</span> To determine the Window Title, run <a href="http://technet.microsoft.com/en-us/sysinternals/bb896653.aspx" target="_blank"><nobr>Process Explorer</nobr></a>
+<br><span style="visibility:hidden;">Notes:</span> AutoHotkey has the following WM_COMMAND numbers defined in resource.h
+</font>
+<table border="0" class="tnb3">
+  <tbody><tr><td>ID_FILE_PAUSE</td><td>65403</td></tr>
+  <tr><td>ID_FILE_SUSPEND</td><td>65404</td></tr>
+  <tr><td>ID_FILE_EXIT</td><td>65405</td></tr>
+  <tr><td colspan="2">(0x111 is WM_COMMAND)</td></tr>
+</tbody></table>
+
+<br>
+<span class="precom3">Tech note: Other WM_COMMAND numbers defined in AutoHotkey source file resource.h
+(I haven't tried any of these to see what they do)</span>
+<table border="0" class="precom3">
+  <tbody><tr><td>ID_FILE_RELOADSCRIPT</td><td>65400</td></tr>
+  <tr><td>ID_FILE_EDITSCRIPT</td><td>65401</td></tr>
+  <tr><td>ID_FILE_WINDOWSPY</td><td>65402</td></tr>
+  <tr><td>ID_FILE_PAUSE</td><td>65403</td></tr>
+  <tr><td>ID_FILE_SUSPEND</td><td>65404</td></tr>
+  <tr><td>ID_FILE_EXIT</td><td>65405</td></tr>
+  <tr><td>ID_VIEW_LINES</td><td>65406</td></tr>
+  <tr><td>ID_VIEW_VARIABLES</td><td>65407</td></tr>
+  <tr><td>ID_VIEW_HOTKEYS</td><td>65408</td></tr>
+  <tr><td>ID_VIEW_KEYHISTORY</td><td>65409</td></tr>
+  <tr><td>ID_VIEW_REFRESH</td><td>65410</td></tr>
+  <tr><td>ID_HELP_USERMANUAL</td><td>65411</td></tr>
+  <tr><td>ID_HELP_WEBSITE</td><td>65412</td></tr>
+</tbody></table>
+<br>
+Another way to identify the AutoHotkey script you want to Exit(/Suspend/Pause):
+<pre>WM_COMMAND = 0x111
+ID_FILE_EXIT = 65405
+DetectHiddenWindows, On
+
+WinGet, AList, List, ahk_class AutoHotkey       <span class="com">; Make a list of all running AutoHotkey programs</span>
+Loop %AList% {                                  <span class="com">; Loop through the list</span>
+  ID := AList%A_Index%
+  WinGetTitle, ATitle, ahk_id %ID%              <span class="com">; (You'll notice this isn't the same 'window title')</span>
+  MsgBox, 3, %A_ScriptName%, %ATitle%`n`nEnd?
+  IfMsgBox Cancel
+    Break
+  IfMsgBox Yes
+    PostMessage,WM_COMMAND,ID_FILE_EXIT,0,,% "ahk_id" AList%A_Index%   <span class="com">; End the process (65404 to suspend, 65403 to pause)</span>
+}
+ExitApp
+</pre>
+
+<br>
+<br>/******************************************************************************
+<br>
+<a name="Q"><span class="lh">Q:</span><span class="header">&nbsp;&nbsp;NAVIGATING WEB SITES</span></a>
+<br><span class="arial">See example file </span><a href="http://www.daviddeley.com/autohotkey/xprxmp/WebsiteNav.ahk" target="_blank"><nobr>WebsiteNav.ahk</nobr></a>
+<br>
+<br>
+<a name="Q1"><span class="lh">Q1:</span><span class="lh">&nbsp;&nbsp;DETERMINING WHEN A WEBPAGE HAS FINISHED LOADING</span></a>
+<br>See FAQ: <a href="http://www.autohotkey.com/docs/FAQ.htm#load" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/docs/FAQ.htm#load</font></nobr></a>
+
+<ul>
+  <li><span class="hd5">Method 1: Wait for status line to say "Done"</span>
+      <br>See example in file <a href="http://www.daviddeley.com/autohotkey/xprxmp/WebsiteNav.ahk" target="_blank"><nobr>WebsiteNav.ahk</nobr></a>
+      <br>
+      <br>
+  </li><li><span class="hd5">Method 2: call IEReady()</span>
+      <br>[Only works for Internet Explorer (afik)]
+      <br>See post "Determine if a WebPage is completely loaded in IE" : <a href="http://www.autohotkey.com/forum/topic19256.html" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/topic19256.html</font></nobr></a>
+      <br>See example in file <a href="http://www.daviddeley.com/autohotkey/xprxmp/WebsiteNav.ahk" target="_blank"><nobr>WebsiteNav.ahk</nobr></a>
+      <ol>
+        <li>Download <b>Com.zip</b> from:  <a href="http://www.autohotkey.net/~Sean/Lib/COM.zip" target="_blank"><nobr><font size="-1">http://www.autohotkey.net/~Sean/Lib/COM.zip</font></nobr></a>
+            <br>(See "COM Standard Library" post: <a href="http://www.autohotkey.com/forum/topic22923.html)" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/topic22923.html)</font></nobr></a>
+            <br>Unzip and place <b>COM.ahk</b> here: <span class="arial">C:\Program Files\AutoHotkey\Lib\COM.ahk</span>
+            <br>
+        </li><li>Download function <b>IEReady</b> from:  <a href="http://www.autohotkey.com/forum/topic19256.html" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/topic19256.html</font></nobr></a>
+            <br>          Add fuction IEReady to your .ahk code
+        </li><li>Place a call to <span class="arial">IEReady()</span> in your .ahk code when you want to wait until the page is loaded.
+      </li></ol>
+      <br>
+  </li><li>     <span class="hd5">Method 3:</span> See "Detect when a page is loaded (reliable, cross-browser)" post: <a href="http://www.autohotkey.com/forum/topic35056.html" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/topic35056.html</font></nobr></a>
+      <br>
+      <br>
+  </li><li>     <span class="hd5">Methods 4,5,6,...</span>
+      <br>For more advanced methods see these two posts:
+      <br>("This is left as an exercise for the student", which is what the professor says when it's over his head.)
+      <ul>
+      <li>       Automation IE7 Navigation and Scripting with Tabs
+          <br>       <a href="http://www.autohotkey.com/forum/viewtopic.php?t=30599" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/viewtopic.php?t=30599</font></nobr></a>
+      </li><li>       IE and Gui Browser Com Tutorial
+          <br>       <a href="http://www.autohotkey.com/forum/viewtopic.php?t=34972" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/viewtopic.php?t=34972</font></nobr></a>
+      </li></ul>
+</li></ul>
+
+<br>
+<br>
+
+<a name="Q2"><span class="lh2">Q2:</span><span class="lh">&nbsp;&nbsp;POSITION US ON A CERTAIN CONTROL</span></a>
+<br><span class="arial">Examples are from simple to more complex.
+All examples here are demonstrated in file <a href="http://www.daviddeley.com/autohotkey/xprxmp/WebsiteNav.ahk" target="_blank"><nobr>WebsiteNav.ahk</nobr></a></span>
+<br>
+<ul>
+  <li><span class="hd5">Method 1: Blindly hit the {Tab} key a certain number of times to position us where we want to be.</span>
+      <br>(Not very reliable. e.g. User may have Google toolbar installed, which we'd have to tab through.
+      <br>Or perhaps Yahoo toolbar. Or no toolbar. Who knows...)
+      <br>Example:
+      <br>
+<pre>Send {Tab 34}  <span class="com">;say, 34 tabs gets us where we want to be.</span>
+</pre>
+      <br>
+  </li><li><span class="hd5">Method 2. Hit the {Tab} key until certain text appears in the status bar</span>
+      <br>For this example, assume we are at <a href="http://www.autohotkey.com/" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/</font></nobr></a>
+          and we wish to position ourselves on the <b>Wiki</b> link:
+<pre><span class="com">; For this example, Tab until we find the autoHotkey "Wiki" link</span>
+<span class="com">; When we tab to the AutoHotkey "Wiki" link, the status bar says "http://www.autohotkey.com/wiki/"</span>
+target := "http://www.autohotkey.com/wiki/"
+loop, 40
+{
+  sleep 10  ;this pause may help
+  StatusBarGetText, StatBar, , AutoHotkey - Free Mouse and Keyboard Macro Program
+  if (StatBar = target)
+  {
+    goto FOUNDIT
+  }
+  Send, {Tab}
+}
+<span class="com">;If we drop out here, it means we failed to find our target after 40 tabs</span>
+MsgBox Failed to find %target%
+ExitApp
+
+FOUNDIT:
+MsgBox Found target %target%
+</pre>
+      <br>
+
+  </li><li><span class="hd5">Method 2.5 Hit Shift+Tab to tab backwards until certain text appears in the status bar</span>
+      <br>(May be useful if tabbing forwards doesn't work)
+      <br>
+      <br>
+  </li><li><span class="hd5">Method 3. Search for word which is link you want to click on</span><!-- Brilliant idea by Leef_me -->
+
+      <br>
+      <br>
+
+  </li><li><span class="hd5">Method 4. Jump directly to the control</span>
+      <br>The JavaScript method—we place some JavaScript code in the address bar and execute it
+          to jump directly to the control.
+          This is a faster and more reliable technique, but it's a bit more complicated to set up.
+          We use AutoHotkey <span class="cn">ControlSetText</span> to place the JavaScript code in the address bar,
+          specifying the HTML control ID, or the control NAME, of the control we want to jump to,
+          then we use AutoHotkey <span class="cn">ControlSend</span> to execute that JavaScript.
+      <br>
+      <br>For this example, assume we are at <a href="http://www.autohotkey.com/wiki/" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/wiki/</font></nobr></a>
+          and we wish to position ourselves in the <b>Search</b> field.
+      <br>
+      <b>Determine the ID or NAME of the control:</b>
+      <ul>
+        <li><u>Method 1:</u> Read and decypher the HTML source code. Look for " ID="
+            <br>e.g. for page <a href="http://www.autohotkey.com/wiki/" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/wiki/</font></nobr></a>
+            <br>we find this line of code:
+<pre>&lt;INPUT id=searchInput title="Search AutoHotkey [f]" accessKey=f name=search&gt;
+<span class="com">          ^^^^^^^^^^^                                                ^^^^^^</span>
+</pre>
+            Here our ID is <span class="monodb">searchInput</span>, and our NAME is <span class="monodb">search</span> (we only need one. Either ID or NAME. The ID is best if it's available.)
+            <br>
+            <br>
+        </li><li><u>Method 2:</u> Use a tool to help us find the ID or NAME
+          <ol type="A">
+           <li>Use the Microsoft "Internet Explorer Developer Toolbar" for Internet Explorer 7.
+            <br>(Note: for Internet Explorer 8, see "Discovering Internet Explorer Developer Tools" at <a href="http://msdn.microsoft.com/en-us/library/cc848894(VS.85).aspx" target="_blank"><nobr><font size="-1">http://msdn.microsoft.com/en-us/library/cc848894(VS.85).aspx</font></nobr></a> )
+            <ol type="i">
+              <li>Download and install : <a href="http://www.microsoft.com/downloads/details.aspx?familyid=E59C3964-672D-4511-BB3E-2D5E1DB91038&amp;displaylang=en" target="_blank"><nobr><font size="-1">http://www.microsoft.com/downloads/details.aspx?familyid=E59C3964-672D-4511-BB3E-2D5E1DB91038&amp;displaylang=en</font></nobr></a>
+              </li><li>Navigate to your webpage (using Internet Explorer 7)
+              </li><li>Bring up the "IE Developer Toolbar". (Note: If you do not see the "IE Developer Toolbar" button on the toolbar, it may be off to the right. Click the right-facing arrows at the end of the IE7 command bar to view all available toolbar buttons.)
+              </li><li><span class="cn">FIND -&gt; SELECT ELEMENT BY CLICK</span>
+              </li><li>Move your mouse to the desired element and click.
+              </li><li>In the middle pane ('Attribute:') scroll down and find the ID string.
+                  <br>If there is no ID string, find the NAME string.
+                  <br>If there is no NAME string, cripes, it gets a bit difficult. You'll
+                  <br>have to read up on Javascript and the DOM (Document Object Model).
+            </li></ol>
+           </li><li>Use Firefox and install the Firebug add-on at <a href="http://getfirebug.com/">http://getfirebug.com/</a>
+           </li><li>There are other similar programs to help you examine the source code for web pages. Here are a few:
+            <ul>
+              <li>PageSpy — <a href="http://www.sembel.net/" target="_blank"><nobr><font size="-1">http://www.sembel.net</font></nobr></a>
+              </li><li>Debugbar — <a href="http://www.sembel.net/" target="_blank"><nobr><font size="-1">http://www.debugbar.com</font></nobr></a>
+            </li></ul>
+          </li></ol>
+      </li></ul>
+      <br>
+      <br>For these examples assume you're at <a href="http://www.autohotkey.com/wiki/" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/wiki/</font></nobr></a>
+      <br>
+
+      <ul>
+        <li><span class="hd3">General format using ID:</span>
+<pre><span class="com">; Position to a Control Using the Control's Unique <u>ID</u></span>
+ControlSetText, Edit1, javascript:document.getElementById('<span class="uk">&lt;element-ID&gt;</span>')[0].focus()
+ControlSend, Edit1, {Enter}, <span class="uk">&lt;window-title&gt;</span>
+Sleep 100     <span class="com">;give it a moment too do it's thing (important)</span>
+</pre>
+
+            <small>(Caution: <span class="cnb">getElementById</span> is case sensitive! I originally tried <span class="cnb">getElementByID</span> (last letter <span class="cn">D</span> instead of <span class="cn">d</span>) and it didn't work.)</small>
+            <br>
+            <br>
+            <span class="hd4">Example using ID:</span>
+
+<pre><span class="com">; Position to a Control Using the Control's Unique <u>ID</u>
+; For this example the control's ID is <b>searchInput</b>
+; and the window title contains the word <b>AutoHotkey</b></span>
+ControlSetText, Edit1, javascript:document.getElementById('<b>searchInput</b>').focus()
+ControlSend, Edit1, {Enter}, <b>AutoHotkey</b>
+Sleep 100     <span class="com">;give it a moment too do it's thing (important)</span>
+</pre>
+        </li>
+
+        <li><span class="hd3">General format using NAME:</span>
+<pre><span class="com">; Position to a Control Using the Control's <u>NAME</u></span>
+ControlSetText, Edit1, javascript:document.getElementsByName('<span class="uk">&lt;element-name&gt;</span>')[0].focus()
+ControlSend, Edit1, {Enter}, <span class="uk">&lt;window-title&gt;</span>
+Sleep 100     <span class="com">;give it a moment too do it's thing (important)</span>
+</pre>
+
+
+            <span class="hd4">Example using NAME:</span>
+
+<pre><span class="com">; Position to a Control Using the Control's <u>NAME</u>
+; For this example the control's NAME is <b>search</b>
+; and the window title contains the word <b>AutoHotkey</b></span>
+ControlSetText, Edit1, javascript:document.getElementsByName('<b>search</b>')[0].focus()
+ControlSend, Edit1, {Enter}, <b>AutoHotkey</b>
+Sleep 100     <span class="com">;give it a moment too do it's thing (important)</span>
+</pre>
+
+            <span class="hd4">If more than one control has the same name:
+              <ol type="a">
+                <li>Go kick George Foreman in the shin for naming all 5 of his sons "George" (and two of his daughters).</li>
+                <li>Then figure out what number to use instead of <font face="Courier New"><b>[0]</b></font> to get to the n'th control with that NAME.
+                  <br>
+                  <br>
+                  <small>(Note: There is no legal way to use the NAME attribute from such tags as DIV or SPAN, according to the W3C HTML 4.01 specs. You must confine the usage of this attribute to such tags as INPUT, IMG, FRAME, IFRAME, FORM, MAP, PARAM, META, OBJECT, A, SELECT, APPLET, TEXTAREA, or BUTTON. (Those who use XML or XHTML or XFILES or whatever may have different rules to play by.)</small></li>
+              </ol>
+              <br>
+              If the control you want has no ID or NAME:
+              <ul>
+                <li>Argh! This is getting hard! You'll have to go read up about JavaScript and the DOM (Document Object Model)
+                    <br>Some things you could try:</li>
+              </ul>
+            </span>
+<pre>javascript:document.getElementsByTagName('a')[6].focus() <span class="com">; Get the 7th &lt;A&gt; tag in the document (numbering begins with 0).</span>
+javascript:document.links[6].focus()                     <span class="com">; Get the 7th link in the document (numbering begins with 0).</span>
+</pre>
+          <br>
+        </li>
+      </ul>
+
+  </li><li><span class="hd5">Methods 5,6,7,...</span><br>For more advanced methods see these two posts:
+      <ul>
+        <li>Automation IE7 Navigation and Scripting with Tabs
+          <br><a href="http://www.autohotkey.com/forum/viewtopic.php?t=30599" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/viewtopic.php?t=30599</font></nobr></a>
+          <br>
+          </li><li>IE and Gui Browser Com Tutorial
+          <br><a href="http://www.autohotkey.com/forum/viewtopic.php?t=34972" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/viewtopic.php?t=34972</font></nobr></a>
+          <br><small>("This is left as an exercise for the student", which again is what the professor says when it's over his head.)</small></li>
+      </ul>
+  </li>
+</ul>
+
+<br>
+<br><a name="Q3"><span class="lh">Q3: SEARCH FOR A COLORED PIXEL</span></a>
+<br>
+Note: If I'm searching a white background for black text, I find it
+works better to search for "not white" rather than search for
+"black", because sometimes that black text isn't really black
+when you look at it closely.
+<br>
+<br>
+The following actually goes quite fast if you comment out the moving of
+the mouse. I move the mouse here for demonstration purposes.
+<br>
+
+<pre>WinGetPos, winposX, winposY, Width, Height, A  ;Get window Width, Height
+<span class="com">;MsgBox, 0, , winposX=%winposX%`n winposY=%winposY% `nWidth=%Width% `nHeight=%Height%,</span>
+
+<span class="com">;Calculate a starting position</span>
+X := Width - 60
+Y := Height / 2
+MouseMove, X, Y, 7
+
+MsgBox, 0, , Move left until we find "not white", 1.2
+
+<span class="com">;move left until we find "not white"</span>
+loop 200
+{
+    MouseMove, X, Y, 0
+    PixelGetColor, color, X, Y, RGB
+    ;MsgBox, 0, , color=%color%, 0.1
+    if (color &lt;&gt; "0xFFFFFF")
+    {
+      Goto FOUND_TCOLOR
+    }
+    X -= 1
+}
+<span class="com">;If we drop out here, it means we failed to find our target</span>
+MsgBox, 0, , Failed to find color "not white", 2
+goto Exit
+
+FOUND_TCOLOR:
+MsgBox, 0, , Found "not white". color = %color%, 2
+
+Exit:
+MsgBox, 0, , The End, 2
+ExitApp
+</pre>
+
+
+<br>/************************************************
+<br>
+<a name="R"><span class="lh">R:</span><span class="header">&nbsp;&nbsp;NEWBIE RECOMMENDED LEARNING SEQUENCE</span></a>
+<br>  Reference: Recommended by jaco0646 (thank you jaco0646)
+<br>  <a href="http://www.autohotkey.com/forum/viewtopic.php?t=29204" target="_blank"><nobr><font size="-1">http://www.autohotkey.com/forum/viewtopic.php?t=29204</font></nobr></a>)
+<ul>
+<li>Commands dealing with files start with FILE
+</li><li>Commands dealing with windows start with WIN
+</li><li>Commands dealing with text start with STRING
+</li></ul>
+Similarly:
+<ul>
+<li>Commands that retrieve data from somewhere contain GET
+</li><li>Commands that apply data to somewhere contain SET
+</li></ul>
+<br>Suggested order of study for AutoHotkey newbies:
+<br>First:
+
+<ol>
+<li>read the Tutorial
+</li><li>the Scripts page
+</li><li>the FAQ
+</li></ol>
+
+<br>   Afterwards, recommend learning concepts in the following order:
+<ol>
+<li>Hotstrings
+</li><li>Hotkeys
+</li><li>Mouse Clicks &amp; Mouse HotKeys
+</li><li>Variables
+</li><li>Loops - especially Parsing Loops
+</li><li>String commands - (e.g. StringMid, StringReplace)
+</li><li>If,Else statements
+</li><li>Expressions
+</li><li>Arrays &amp; Dynamic variables - (StringSplit)
+</li><li>GoSub &amp; Functions
+</li><li>GUIs
+</li><li>Windows Messages
+</li><li>DllCall
+</li></ol>
+
+<br>
+
+<br>/******************************************************************************
+<br>
+<a name="S"><span class="lh">S:</span><span class="header">&nbsp;&nbsp;PRESS ESC TO CANCEL THIS SCRIPT</span></a>
+<br><span class="subheader">Defining Hotkeys</span>
+<br>    A hotkey definition line stops execution at that point, so if you want the
+<br>    script to run to the end but have the ESC key available to terminate the script,
+<br>    put the hotkey definition at the end, just <i>after</i> your ExitApp statement.
+
+<pre><span class="com">;Press ESC to cancel this script</span>
+Esc::ExitApp
+</pre>
+
+
+<br>/******************************************************************************
+<br>
+<a name="T"><span class="lh">T:</span><span class="header">&nbsp;&nbsp;THE AUTOHOTKEY RUN COMMAND</span></a>
+<br>
+<br>
+Program:
+<pre>Run, ShowParams.exe  hello  goodbye  Friday
+</pre>
+AutoHotkey script:
+<pre>Run, autohotkey.exe  ShowParams.ahk  hello  goodbye  Friday
+</pre>
+VBScript:
+<pre>Run, cscript.exe  ShowParams.vbs  hello  goodbye  Friday
+</pre>
+JScript:
+<pre>Run, cscript.exe  ShowParams.js  hello  goodbye  Friday
+</pre>
+Any command:
+<pre><span class="tarrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&nbsp;cmd.exe strips off these outer "&nbsp;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;</span>
+Run, "%comspec%" /c ""ShowParams.ahk"  "hello"  "goodbye"  "friday"", , Hide
+</pre>
+<span class="code"><b>Hide</b></span> is specified to prevent the Command Prompt Window from popping up.
+<br><span class="code"><b>/c</b></span> causes Command Prompt Window to exit after command is executed.
+<br><span class="code"><b>/k</b></span> instead of /c would cause Command Prompt Window to remain open after command is executed. Useful for debugging.
+
+<br>
+<br>
+<hr width="90" align="left">
+Notes:
+<div class="footnotes">
+AutoHotkey scripts:
+<br>Why does specifying just 'autohotkey.exe' work? Because the AutoHotkey
+installer adds the following entry to the registry:
+<div class="codesamp2">
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\AutoHotkey.exe]
+<br>@="C:\\Program Files\\AutoHotkey\\AutoHotkey.exe"
+</div>
+<br>
+VBscript and JScript:
+<br>
+You may also use wscript.exe — wscript.exe is the windows version, cscript.exe is the console version. You'll find them in the System32 directory.
+<br>
+(JScript is Microsoft's own version of JavaScript.)
+<br>
+<br>
+The <span class="footcode">comspec</span> environment variable usually
+equates to <span class="footcode">C:\Windows\System\System32\cmd.exe</span> .
+On Windows 95,98,ME it equates to COMMAND.COM .
+It's also possible the user may have changed it to run a fancier command
+prompt such as
+JPSoft's Take Command command line utility (<a href="http://jpsoft.com/" target="_blank"><nobr>http://jpsoft.com</nobr></a>)
+<br>
+<br>
+The AutoHotkey RUN command currently does not parse <span class="code">&lt;target&gt;</span> the way
+you'd expect it to, so the results often aren't quite what you wanted. Here's
+how it works:
+
+<ol>
+<li>Autohotkey parses off the <span class="code">&lt;target&gt;</span> parameter.
+<br>The <span class="code">&lt;target&gt;</span>
+parameter is delimited by a comma, so if you want to include a comma
+somewhere in the target parameter, you need to escape it with a `
+
+</li><li>Autohotkey expands any variables (e.g. %day%).
+<br>Variables are delimited by %, so if you want to include a literal %
+somewhere in the <span class="code">&lt;target&gt;</span> parameter, you need to escape it with a `
+
+</li><li>AutoHotkey tries calling <a href="http://msdn2.microsoft.com/en-us/library/ms682425.aspx" target="_blank">CreateProcess()</a> passing the processed <span class="code">&lt;target&gt;</span> parameter
+as the <i>lpCommandLine</i> argument.
+
+</li><li>If CreateProcess() fails, AutoHotkey tries calling <a href="http://msdn.microsoft.com/en-us/library/bb762153(VS.85).aspx" target="_blank">ShellExecute()</a> passing
+the processed <span class="code">&lt;target&gt;</span> parameter as the <i>lpFile</i> parameter. Note:
+This is where it would be nice if AutoHotkey would split <span class="code">&lt;target&gt;</span>
+between the command and parameters, passing the command as <i>lpFile</i> and the
+parameters as <i>lpParameters</i>, but it doesn't. It instead passes the entire line
+as the <i>lpFile</i> parameter, leaving the <i>lpParameters</i> argument NULL.
+
+The reason for this is the design decision mentioned in the AutoHotkey source
+code file script.cpp routine ActionExec: "User can launch a document name
+containing spaces without having to enclose it in double quotes."
+</li></ol>
+</div>
+<br>
+An alternative to using Run is to directly call <a href="http://msdn.microsoft.com/en-us/library/bb762153(VS.85).aspx" target="_blank">ShellExecute()</a> :
+
+<pre>command = ShowParams.ahk
+params = hello goodbye Friday
+res := DllCall("shell32\ShellExecuteA"
+      , "UInt", 0             <span class="com">; hwnd</span>
+      , "UInt", 0             <span class="com">; lpOperation</span>
+      , "Str", command        <span class="com">; lpFile</span>
+      , "Str", params         <span class="com">; lpParameters</span>
+      , "Str", A_WorkingDir   <span class="com">; lpDirectory</span>
+      , "UInt", 0)            <span class="com">; nShowCmd</span>
+MsgBox (%ErrorLevel%) %res%
+</pre>
+
+
+<br>/******************************************************************************
+<br>
+<a name="U"><span class="lh">U:</span><span class="header">&nbsp;&nbsp;PASSING PARAMETERS TO AUTOHOTKEY SCRIPTS</span></a>
+<br>
+On Windows, parameters are parsed off the command line <i>after</i> the new process is created,
+<i>by</i> the new process.
+It's considered the responsibility of the newly started application to call the
+<a href="http://msdn2.microsoft.com/en-us/library/ms683156.aspx">GetCommandLine()</a>
+API to retrieve the command line string and parse it.
+
+<p>
+How does a C/C++ program on Windows get <font color="darkblue">argv[]</font>?
+The C/C++ compiler which compiles the program secretly adds extra
+code to the executable that retrieves and parses the command line to extract
+the parameters before calling WinMain (or main). Thus, for a C/C++ executable
+on Windows, the parameter parsing rules are <b>determined by the C/C++
+compiler that compiled the program.</b>
+
+</p><p>
+AutoHotkey is written in C++ and obtains its parameters via the <font color="darkblue">argv[]</font>
+vector.<a name="S1" href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#R1" class="footnote"><sup><span style="font-size:smaller;">1</span></sup></a>
+Thus it uses the Microsoft C/C++ Parameter Parsing Rules. The rules are:
+
+<font face="Verdana" size="-1">
+</font></p><ol><font face="Verdana" size="-1">
+  <li>Parameters are <i>always</i> separated by a space or tab (multiple spaces/tabs OK)
+  <br>
+  </li><li>If the parameter does not contain any spaces, tabs, or double quotes, then all the characters in the parameter are accepted as is (there is no need to enclose the parameter in double quotes).
+  <br>
+  </li><li>Enclose spaces and tabs in a double quoted part
+  <br>
+  </li><li>A double quoted part can be anywhere within a parameter
+  <br>
+  </li><li>2n backslashes followed by a " produce n backslashes and start or end a double quoted part
+  <br>
+  </li><li>2n+1 backslashes followed by a " produce n backslashes + a literal quotation mark
+  <br>
+  </li><li>n backslashes not followed by a quotation mark produce n backslashes
+  <br>
+  </li><li>If a closing " is followed immediately by another ", the 2nd " is accepted literally and added to the parameter (this is the undocumented rule)
+</li></font></ol><font face="Verdana" size="-1">
+</font>
+
+For more on passing parameters to programs, with numerous examples, see the essay
+<a href="http://www.daviddeley.com/autohotkey/parameters/parameters.htm" target="_blank">How Command Line Parameters Are Parsed</a>
+<br>
+<br>
+<hr width="90" align="left">
+Notes:
+<div class="footnotes">
+<div style="font-size:smaller;"><a name="R1" href="http://www.daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm#S1">1.</a> Actually AutoHotkey uses the <span class="footcode">__argv[]</span> vector.</div>
+</div>
+<br>/******************************************************************************
+<br>
+<a name="V"><span class="lh">V:</span><span class="header">&nbsp;&nbsp;PASSING PARAMETERS TO ANY PROGRAM</span></a>
+<br>
+You aren't sure how to escape the special characters in that parameter
+so it comes out right? See the essay
+<a href="http://www.daviddeley.com/autohotkey/parameters/parameters.htm" target="_blank">How Command Line Parameters Are Parsed</a>
+
+
+<br>
+<br>
+<br>/******************************************************************************
+<br>
+<br><small>My title: <b>"" %% (), And All That</b>, is taken from the wonderful book, <a href="http://www.amazon.com/exec/obidos/ASIN/0393962512/daviddeleysho-20" target="_blank"><nobr>Div, Grad, Curl, And All That: An Informal Text on Vector Calculus</nobr></a> by H. M. Schey (1973)
+<br>
+<br><u>History:</u>
+<br>Version 1.00  02/28/2009
+<br>Version 1.04  03/08/2009
+<br>Version 1.05  03/09/2009
+<br>Version 1.09  03/26/2009
+<br>Version 1.10  04/30/2009
+<br>Version 1.12  05/15/2009
+<br>Version 1.14  05/24/2009
+<!-- <br>Version 1.16  05/29/2009 -->
+<!-- <br>Version 1.17  05/27/2009 -->
+<!-- <br>Version 1.18  05/29/2009 -->
+<br>Version 1.19  06/01/2009
+<!-- <br>Version 1.20  06/04/2009 --><br>Version 1.21  08/24/2009
+<br>Version 1.22  01/02/2011
+
+</small>
+
+</body></html>
