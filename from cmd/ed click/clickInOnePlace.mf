@@ -1,0 +1,2 @@
+Main-Class: clickInOnePlace
+Class-Path: clickInOnePlace.class

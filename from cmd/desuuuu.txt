@@ -1,0 +1,72 @@
+
+/click MerchantItem1ItemButton
+/click MerchantItem2ItemButton
+/script if (not(nseVar)) then nseVar=2 end for i=nseVar,nseVar+1 do UseContainerItem(0,i); end; nseVar = nseVar + 2;if (nseVar>15) then nseVar = 2 end;
+
+
+
+"get gabbin or get goin" the NPC says that. female british from starter zone.
+/script PlaySoundFile("Sound/creature/GilneanCivF/VO_GilneanCivF_Greeting04.ogg")
+
+"be seeing you!"
+/script PlaySoundFile("Sound/creature/GnomeMaleZanyNPC/GnomeMaleZanyFarewell01.ogg")
+
+aaevery 5 minutes say some real nigga shit
+
+http://www.wowhead.com/item=104198/mantid-artifact-hunters-kit#comments
+http://multiplayer1205.blogspot.com/2012/05/using-3d-models-in-world-of-warcraft-ui.html
+get the mantid artifact thing 
+get exalted with the lorewalkers
+
+glyph of the ursol chameleon
+glyph of sunfall
+
+script b=CreateFrame("Frame",nil,UIParent);b:SetSize(600,600);b:SetPoint("CENTER");m=CreateFrame("PlayerModel",nil,b);b.portrait=m;m:SetUnit("player");m:SetModel("Creature\EYEOFKATHUNE\EyeofKathune.M2");m:SetAllPoints();b:Show();m:SetPortraitZoom(2.5)
+
+
+/script b=CreateFrame("Frame",nil,UIParent);b:SetAllPoints();m=CreateFrame("PlayerModel",nil,b);m:SetAllPoints();m:SetModel("Creature/EYEOFKATHUNE/EyeofKathune.M2");b:Show();m:SetPortraitZoom(1)
+
+
+script b=CreateFrame("Frame",nil,UIParent);b:SetSize(600,600);b:SetPoint("CENTER");m=b:CreateTexture();m:SetAllPoints();m:SetTexture("Interface\\icons\\inv_misc_fish_83");b:Show();
+
+/script PlayerPortrait:SetTexture('Interface/AddOns/Checkers/images/trump.tga');
+
+inv_misc_fish_83
+
+
+
+load models into game using :SetModel("filepath");
+
+if the back button is in the vcorner, then press escape
+
+back button:
+at 1658,968
+color is 242,250,230
+
+
+sorry my lil brother is on the computer
+
+do you not enjoy having fun
+
+come on step it up
+
+OLEEEEE
+
+B R A S I L
+
+my cousin was on the computer earlier haha sorry
+
+brb macaroni and cheese is done
+
+left click is Z
+
+right click is F
+
+play music in microphone
+
+
+
+
+randomly press Q and E and right click
+
+
