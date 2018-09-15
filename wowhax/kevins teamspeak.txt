@@ -1,0 +1,2 @@
+ts37.gameservers.com:9519
+pass: qq
