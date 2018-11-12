@@ -1,0 +1,26 @@
+9:11 AM 11/12/2018
+[]AHK UI keeps history of all ctrl+C
+
+8/15/18
+[]copy a bunch of lines of text
+
+-keypress/button to begin sequence
+-each ctrl+c copy after press is put in your copy+paste buffer
+-keypress/button to end sequence
+gonna need a ui for it tbh
+
+it's a sequence of things to put into your clipboard so you can copy paste from gross tables and stuff easier
+
+10:10 AM 10/24/2018
+1 to begin recording
+3 to end recording
+2 to execute
+
+can do mouse or keyboard
+can save to a file and load into the 789 row or something
+or some kind of ui or something
+
+10:33 AM 10/24/2018
+alt+mousewheel should
+do like 2x mousewheel
+
