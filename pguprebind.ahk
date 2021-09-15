@@ -29,7 +29,7 @@ it will copy things and add it to an AHK table window UI
 */
 
 
-PgUp::Ins
+; PgUp::Ins
 XButton2::BackSpace
 XButton1::pasteboy()
 +XButton2::undoboy()
