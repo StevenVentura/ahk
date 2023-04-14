@@ -1,0 +1,11 @@
+Esc::ExitApp
+
+toggle := false
+
+x::SetTimer, Macro, % ((toggle := !toggle) ? "0" : "Off")
+
+Macro:
+    Send, s
+	Sleep, 50
+	Send, {Backspace}
+    return
