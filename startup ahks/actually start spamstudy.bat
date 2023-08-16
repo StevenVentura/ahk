@@ -1,0 +1,1 @@
+call "C:\Users\Yoloswag\Documents\GitHub\Spamstudy\start spamstudy.bat"
