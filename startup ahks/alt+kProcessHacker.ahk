@@ -11,5 +11,5 @@ Run, C:\Program Files (x86)\Notepad++\notepad++.exe
 Return
 
 !m::
-Run, mspaint.exe
+Run, mspaint.exe "G:\cheating shit\blackpaint.png"
 Return
