@@ -1,0 +1,9 @@
+## Interface: 70100
+
+## Title: |cff88ff88GryanStoutmantle
+
+## Notes: |cff22ffffSample Text
+## SavedVariables: gryanvar
+
+GryanStoutmantle.xml
+GryanStoutmantle.lua
